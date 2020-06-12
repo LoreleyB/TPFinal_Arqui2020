@@ -26,7 +26,7 @@ module PC_MUX #(
 	//input [len-1:0] jump,
 	input [len-1:0] i_branch,
 	//input [len-1:0] register,
-	input [len-1:0] i_pc,
+	input [len-1:0] i_PC,
 	input i_select,
 	output reg [len-1:0] o_PC_MUX
     );
@@ -38,7 +38,7 @@ module PC_MUX #(
     		//3'b 010: out_mux_PC <= register;
     	   o_PC_MUX <= i_branch;
     	else
-    	   o_PC_MUX <= i_pc;
+    	   o_PC_MUX <= i_PC;
    	end
 	    
 endmodule

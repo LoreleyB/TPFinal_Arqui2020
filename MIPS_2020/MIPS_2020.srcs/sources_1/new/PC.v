@@ -30,21 +30,21 @@ module PC#(
     input enable,
     //input ctrl_clk_mips,
 
-    output reg [len-1:0] Out = 0
+    output reg [len-1:0] o_PC = 0
     );
 
     always @(posedge clk, posedge reset)
     begin
         if(reset) begin
-            Out = {len{1'b 0}}; 
+            o_PC = {len{1'b 0}}; 
         end
 		else if (enable) begin//if (ctrl_clk_mips) begin
             //if (enable) begin
-                Out = i_PC;
+                o_PC = i_PC;
             end
 
             else begin
-                Out = Out;
+                o_PC = o_PC;
             end
         end
 //	end

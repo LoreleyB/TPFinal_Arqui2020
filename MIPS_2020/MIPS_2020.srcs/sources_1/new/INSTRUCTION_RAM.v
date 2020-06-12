@@ -68,8 +68,7 @@ module INSTRUCTION_RAM #(
 			ram_data <= 0;
 		end
 		//else if (ctrl_clk_mips) begin
-			if (enable)
-			begin
+		else if (enable)	begin
 				if(flush)
 				ram_data <= 0;
 				else

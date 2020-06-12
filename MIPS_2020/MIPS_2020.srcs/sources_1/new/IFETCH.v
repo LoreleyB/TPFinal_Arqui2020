@@ -26,21 +26,22 @@ module IFETCH #(
 	input clk,
 	//input ctrl_clk_mips,
 	input reset,
-	input [2:0] i_PC_src,
+	//input [2:0] i_PC_src,
+	input i_PC_src,
 	//input [len-1:0] in_pc_jump,
 	input [len-1:0] i_PC_branch,
 	//input [len-1:0] in_pc_register,
 	input stall_flag,
 
-	input [len-1:0] in_addr_debug,
+	input [len-1:0] i_address_debug,
 	input debug_flag,
-	input [len-1:0] in_ins_to_mem,
-	input wea_ram_inst,
+	input [len-1:0] i_instruc_to_memo,
+	input i_write_enable_ram_inst,
 
-	output reg [len-1:0] out_pc_branch,
-	output [len-1:0] out_instruction,
-	output [len-1:0] out_pc,
-	output reg out_halt_flag_if // para debug
+	output reg [len-1:0] o_pc_branch,
+	output [len-1:0] o_instruction,
+	output [len-1:0] o_PC,
+	output reg o_halt_flag_if // para debug
     );
 
     wire [len-1:0] connect_sumador_mux; 
@@ -48,37 +49,35 @@ module IFETCH #(
     wire [len-1:0] connect_pc_sumador_mem;
     wire [len-1:0] connect_out_instruction;
     wire [len-1:0] connect_pc_out;
-    wire connect_wire_douta;
-    wire flush = i_PC_src[0];
+    wire w_validI;
+    //wire flush = i_PC_src[0];
+    wire flush = i_PC_src;
 
-    assign out_instruction = connect_out_instruction;
-    assign out_pc = connect_pc_sumador_mem;
+    assign o_instruction = connect_out_instruction;
+    assign o_PC = connect_pc_sumador_mem;
 
-	mux_PC #(
+	PC_MUX #(
 		.len(len)
 		)
-		u_mux_PC(
-			.jump(in_pc_jump),
-			.branch(i_PC_branch),
-			.register(in_pc_register),
-			.pc(connect_sumador_mux),
-			.select(i_PC_src),
-			.out_mux_PC(connect_mux_pc)
+		PC_MUX(
+			.i_branch(i_PC_branch),
+			.i_PC(connect_sumador_mux),
+			.i_select(i_PC_src),
+			.o_PC_MUX(connect_mux_pc)
 		); 
 
-	pc #(
+	PC #(
 		.len(len)
 		)
-		u_pc(
-			.In((connect_wire_douta)?(connect_pc_sumador_mem):(connect_mux_pc)),
+		PC(
+			.i_PC((w_validI)?(connect_pc_sumador_mem):(connect_mux_pc)),
 			.clk(clk),
-			.ctrl_clk_mips(ctrl_clk_mips),
 			.reset(reset),
 			.enable(stall_flag),
-			.Out(connect_pc_sumador_mem)
+			.o_PC(connect_pc_sumador_mem)
 			);
 
-	ram_instrucciones #(
+	INSTRUCTION_RAM #(
 		.RAM_WIDTH(len),
 		.RAM_DEPTH(2048),
 		// .INIT_FILE("/home/facundo/Desktop/practico_arquitectura_de_computadoras/TP4_MIPS/program.hex"),
@@ -86,44 +85,43 @@ module IFETCH #(
         // .INIT_FILE("E:/Drive/Facultad/quinto/Arquitectura_de_Computadoras/TP4_MIPS/program.hex"),
 		.RAM_PERFORMANCE("LOW_LATENCY")
 		)
-		u_ram_instrucciones(
-			.addra(debug_flag ? in_addr_debug : connect_pc_sumador_mem),
+		INSTRUCTION_RAM(
+			.i_addressI(debug_flag ? i_address_debug : connect_pc_sumador_mem),
 			.clka(clk),
-			.ctrl_clk_mips(ctrl_clk_mips),
 			.reset(reset),
-			.ena(stall_flag),
-			.wea(wea_ram_inst),
-			.wire_douta(connect_wire_douta),
+			.enable(stall_flag),
+			.i_writeEnable(i_write_enable_ram_inst),
+			.o_validI(w_validI),
 			.flush(flush),
-			.douta(connect_out_instruction),
-			.dina(in_ins_to_mem)
+			.o_dataI(connect_out_instruction),
+			.i_dataI(i_instruc_to_memo)
 			); 
 
-	sumador #(
-		.len1(len)
+	PC_SUM #(
+		.LEN(len)
 		)
-		u_sumador(
-			.In1(connect_pc_sumador_mem),
-			.In2(1),
-			.Out(connect_sumador_mux)
+		PC_SUM(
+			.i_inPC(connect_pc_sumador_mem),
+			.o_outPC(connect_sumador_mux)
 			); 
 
 
 	always @(posedge clk, posedge reset) 
 	begin
 		if(reset) begin
-			out_pc_branch <= 0;
-			out_halt_flag_if <= 0;			
+			o_pc_branch <= 0;
+			o_halt_flag_if <= 0;			
 		end
 
-		else if (ctrl_clk_mips) begin
-			out_halt_flag_if <= connect_wire_douta;
-
-			if (stall_flag | flush) 
-			begin
-				out_pc_branch <= (flush) ? {len{1'b 0}} : connect_sumador_mux;
-			end
-		end
-	end
+        //else if (ctrl_clk_mips) begin
+        else begin
+            o_halt_flag_if <= w_validI;
+    
+            if (stall_flag | flush) 
+            begin
+                o_pc_branch <= (flush) ? {len{1'b 0}} : connect_sumador_mux;
+            end
+        end
+    end
 	
 endmodule
