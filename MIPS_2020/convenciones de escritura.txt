@@ -1,0 +1,12 @@
+convencion de escritura Camel case
+
+i_ = entrada (wire o registro)
+o_ = salida (wire o registro)
+r_ = registro interno
+w_ = wire interno
+
+_IF = etapa de busqueda
+_ID = etapa de decodificacion
+_EX = etapa de ejecucion
+_ME = etapa de memoria
+_WB = etapa de Write Back
