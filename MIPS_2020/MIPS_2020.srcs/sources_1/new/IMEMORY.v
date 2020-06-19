@@ -32,8 +32,8 @@ module IMEMORY #(
 	input reset,
 	input [len-1:0] i_addressMem,
 	input [len-1:0] i_writeData,
-	input [len_mem_bus-1:0] i_memoryBus,
-    input [len_wb_bus-1:0] i_writeBackBus,
+	input [len_mem_bus-1:0] i_signalControlME,
+    input [len_wb_bus-1:0] i_signalControlWB,
 	input [NB-1:0] i_writeReg,	
 
 	input i_zeroFlag,
@@ -68,15 +68,15 @@ module IMEMORY #(
 
 
 
-	assign w_memWrite			= i_memoryBus[0],
-		   w_memRead 			= i_memoryBus[1],
-		   w_branch   		= i_memoryBus[2],
-		   w_controlUnsigned = i_memoryBus[3],
-		   w_control_LH 		= i_memoryBus[4],
-		   w_control_LB 		= i_memoryBus[5],
-		   w_control_SH 		= i_memoryBus[6],
-		   w_control_SB 		= i_memoryBus[7],
-		   w_branchNotEqual   = i_memoryBus[8];
+	assign w_memWrite			= i_signalControlME[0],
+		   w_memRead 			= i_signalControlME[1],
+		   w_branch   		= i_signalControlME[2],
+		   w_controlUnsigned = i_signalControlME[3],
+		   w_control_LH 		= i_signalControlME[4],
+		   w_control_LB 		= i_signalControlME[5],
+		   w_control_SH 		= i_signalControlME[6],
+		   w_control_SB 		= i_signalControlME[7],
+		   w_branchNotEqual   = i_signalControlME[8];
 
 	assign o_pcBranch = i_pcBranch;
 	assign o_pcSrc = w_branch && ((w_branchNotEqual) ? (~i_zeroFlag) : (i_zeroFlag));	// la señal de Branch se activa con ambas intrucciones de branch, la otra señal te indica cual de las 2 fue
@@ -115,7 +115,7 @@ module IMEMORY #(
 		else begin
 			o_haltFlag_MEM <= i_haltFlag_MEM;
 
-			o_writeBackBus <= i_writeBackBus;
+			o_writeBackBus <= i_signalControlWB;
 			o_addressMem <= i_addressMem;
 			o_writeReg <= i_writeReg;
 
