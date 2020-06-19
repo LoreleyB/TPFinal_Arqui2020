@@ -60,7 +60,9 @@ module IFETCH #(
 		.len(len)
 		)
 		PC_MUX(
-			.i_branch(i_PC_branch),
+			//.jump(in_pc_jump),
+			.branch(in_pc_branch),
+			//.register(in_pc_register),
 			.i_PC(connect_sumador_mux),
 			.i_select(i_PC_src),
 			.o_PC_MUX(connect_mux_pc)
