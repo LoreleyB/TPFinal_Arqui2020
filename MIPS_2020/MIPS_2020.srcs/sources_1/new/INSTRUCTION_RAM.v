@@ -31,7 +31,7 @@ module INSTRUCTION_RAM #(
   input clka,                             // Clock
 	//input ctrl_clk_mips,
   input enable,                              // RAM Enable, for additional power savings, disable port when not in use
-  input flush,
+  input i_flush,
   input reset,
   input i_writeEnable,                              // Write enable
   output [RAM_WIDTH-1:0] o_dataI,           // RAM output data
@@ -69,7 +69,7 @@ module INSTRUCTION_RAM #(
 		end
 		//else if (ctrl_clk_mips) begin
 		else if (enable)	begin
-				if(flush)
+				if(i_flush)
 				ram_data <= 0;
 				else
 				ram_data <= BRAM[i_addressI];
