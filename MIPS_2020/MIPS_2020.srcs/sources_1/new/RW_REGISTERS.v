@@ -28,7 +28,7 @@ module RW_REGISTERS#(
 	input clk,
 	//input ctrl_clk_mips,
 	input reset,
-	input i_regWrite,
+	input i_flagRegWrite,
 	input [NB-1:0] i_readRegister1,
 	input [NB-1:0] i_readRegister2,
 	input [NB-1:0] i_writeRegister,
@@ -68,7 +68,7 @@ module RW_REGISTERS#(
 	always @(negedge clk)
 	begin
 		//if (ctrl_clk_mips) begin
-			if (i_regWrite) 
+			if (i_flagRegWrite) 
 			begin
 				r_dataRegistersMatrix[i_writeRegister] <= i_writeData;				
 			end

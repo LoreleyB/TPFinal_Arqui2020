@@ -26,12 +26,11 @@ module IFETCH #(
 	input clk,
 	//input ctrl_clk_mips,
 	input reset,
-	//input [2:0] i_PC_src,
-	input i_pcSrc,
-	//input [len-1:0] in_pc_jump,
+	input [2:0] i_pcSrc,
+	input [len-1:0] i_pcJump,
 	input [len-1:0] i_pcBranch,
-	//input [len-1:0] in_pc_register,
-	input stall_flag,
+	input [len-1:0] i_pcRegister,
+	input i_stallFlag,
 
 	input [len-1:0] i_addressDebug,
 	input i_debugFlag,
@@ -49,8 +48,8 @@ module IFETCH #(
     wire [len-1:0] w_pctoSumadorMem;
     wire [len-1:0] w_instruction;
     wire w_validI;
-    //wire flush = i_pcSrc[0];
-    wire w_flush = i_pcSrc;
+    wire w_flush = i_pcSrc[0];
+    //wire w_flush = i_pcSrc;
 
     assign o_instruction = w_instruction;
     assign o_PC = w_pctoSumadorMem;
@@ -59,9 +58,9 @@ module IFETCH #(
 		.len(len)
 		)
 		PC_MUX(
-			//.jump(in_pc_jump),
-			.branch(i_pcBranch),
-			//.register(in_pc_register),
+			.i_jump(i_pcJump),
+			.i_branch(i_pcBranch),
+			.i_register(i_pcRegister),
 			.i_PC(w_pcSumadorMux),
 			.i_select(i_pcSrc),
 			.o_PC_MUX(w_muxPc)
@@ -74,7 +73,7 @@ module IFETCH #(
 			.i_PC((w_validI)?(w_pctoSumadorMem):(w_muxPc)),
 			.clk(clk),
 			.reset(reset),
-			.enable(stall_flag),
+			.enable(i_stallFlag),
 			.o_PC(w_pctoSumadorMem)
 			);
 
@@ -90,7 +89,7 @@ module IFETCH #(
 			.i_addressI(i_debugFlag ? i_addressDebug : w_pctoSumadorMem),
 			.clka(clk),
 			.reset(reset),
-			.enable(stall_flag),
+			.enable(i_stallFlag),
 			.i_writeEnable(i_writeEnable_inst),
 			.o_validI(w_validI),
 			.i_flush(w_flush),
@@ -118,7 +117,7 @@ module IFETCH #(
         else begin
             o_haltFlag_IF <= w_validI;
     
-            if (stall_flag | w_flush) 
+            if (i_stallFlag | w_flush) 
             begin
                 o_pcBranch <= (w_flush) ? {len{1'b 0}} : w_pcSumadorMux;//si es una salto, mando burbuja (nop), sino mando pc + 1
             end

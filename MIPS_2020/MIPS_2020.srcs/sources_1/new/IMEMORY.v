@@ -43,7 +43,7 @@ module IMEMORY #(
 	output reg [len-1:0] o_readData,
 	output o_pcSrc,
 	output [len-1:0] o_pcBranch,
-    output reg [1:0] o_writeBackBus,
+    output reg [1:0] o_signalControlWB,
 	output reg [len-1:0] o_addressMem,
 	output reg [NB-1:0] o_writeReg,
 
@@ -105,7 +105,7 @@ module IMEMORY #(
 		if(reset)
 		begin
 			o_readData <= 0;
-		    o_writeBackBus <= 0;
+		    o_signalControlWB <= 0;
 			o_addressMem <= 0;
 			o_writeReg <= 0;
 			o_haltFlag_MEM <= 0;
@@ -115,7 +115,7 @@ module IMEMORY #(
 		else begin
 			o_haltFlag_MEM <= i_haltFlag_MEM;
 
-			o_writeBackBus <= i_signalControlWB;
+			o_signalControlWB <= i_signalControlWB;
 			o_addressMem <= i_addressMem;
 			o_writeReg <= i_writeReg;
 

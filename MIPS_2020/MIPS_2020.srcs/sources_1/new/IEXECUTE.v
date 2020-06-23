@@ -40,9 +40,9 @@ module IEXECUTE #(
 	input [NB-1:0] i_rd,
 	input [NB-1:0] i_shamt,
 
-	input [len_exec_bus-1:0] i_executeBus,
-	input [len_mem_bus-1:0] i_memoryBus,
-	input [len_wb_bus-1:0] i_writeBackBus,
+	input [len_exec_bus-1:0] i_signalControlEX,
+	input [len_mem_bus-1:0] i_signalControlME,
+	input [len_wb_bus-1:0] i_signalControlWB,
 
 	// entradas para cortocircuito
 	input i_registerWrite_EXMEM,	// flag
@@ -62,11 +62,11 @@ module IEXECUTE #(
 	output reg [len-1:0] o_dataRegB,
 	output reg [NB-1:0] o_writeReg,
 
-	output reg out_halt_flag_e,
+	output reg o_haltFlag_EX,
 
 	// señales de control
-	output reg [len_mem_bus-1:0] memory_bus_out,
-	output reg [len_wb_bus-1:0] writeBack_bus_out
+	output reg [len_mem_bus-1:0] o_signalControlME,
+	output reg [len_wb_bus-1:0] o_signalControlWB
     );
 
 	wire [1:0] 	w_muxA_FW,
@@ -75,8 +75,8 @@ module IEXECUTE #(
     wire [len-1:0] 	w_muxA_alu_FW,
     				w_muxB_alu_FW;
 
-	wire [len-1:0] w_aluOpA = i_executeBus[10] ? (i_pcBranch) : (i_executeBus[7] ? ({{27{1'b 0}}, i_shamt}) : w_muxA_alu_FW);
-	wire [len-1:0] w_aluOpB = i_executeBus[10] ? (1'b 1) : (i_executeBus[6] ? i_signExtend : w_muxB_alu_FW);
+	wire [len-1:0] w_aluOpA = i_signalControlEX[10] ? (i_pcBranch) : (i_signalControlEX[7] ? ({{27{1'b 0}}, i_shamt}) : w_muxA_alu_FW);
+	wire [len-1:0] w_aluOpB = i_signalControlEX[10] ? (1'b 1) : (i_signalControlEX[6] ? i_signExtend : w_muxB_alu_FW);
 	wire [len-1:0] w_aluOut;
 	wire w_zeroFlag;
 
@@ -88,7 +88,7 @@ module IEXECUTE #(
 		ALU(
 			.i_dataA(w_aluOpA),
 			.i_dataB(w_aluOpB),
-			.i_opCode(i_executeBus[3:0]),
+			.i_opCode(i_signalControlEX[3:0]),
 	
 			.o_result(w_aluOut),
 			.o_zeroFlag(w_zeroFlag)
@@ -135,19 +135,19 @@ module IEXECUTE #(
 			o_zeroFlag <= 0;
 			o_dataRegB <= 0;
 			o_writeReg <= 0;
-			memory_bus_out <= 0;
-			writeBack_bus_out <= 0;
-			out_halt_flag_e <= 0;			
+			o_signalControlME <= 0;
+			o_signalControlWB <= 0;
+			o_haltFlag_EX <= 0;			
 		end
 
 		//else if (ctrl_clk_mips) begin
 		else begin
-			out_halt_flag_e <= i_haltFlag_EX;
+			o_haltFlag_EX <= i_haltFlag_EX;
 
 			if (i_flush) 
 			begin
-				memory_bus_out <= 0;
-				writeBack_bus_out <= 0;
+				o_signalControlME <= 0;
+				o_signalControlWB <= 0;
 				o_pcBranch <= 0;
 				o_alu <= 0;
 				o_dataRegB <= 0;
@@ -156,12 +156,12 @@ module IEXECUTE #(
 			end
 			else
 			begin		
-				memory_bus_out <= i_memoryBus;
-				writeBack_bus_out <= i_writeBackBus;
+				o_signalControlME <= i_signalControlME;
+				o_signalControlWB <= i_signalControlWB;
 				o_pcBranch <= i_pcBranch + i_signExtend;
 				o_alu <= w_aluOut;
 				o_dataRegB <= i_dataRegB;
-				o_writeReg <= i_executeBus[9] ? (5'b 11111) : (i_executeBus[8] ? i_rd : i_rt);
+				o_writeReg <= i_signalControlEX[9] ? (5'b 11111) : (i_signalControlEX[8] ? i_rd : i_rt);
 				o_zeroFlag <= w_zeroFlag;
 			end
 		end

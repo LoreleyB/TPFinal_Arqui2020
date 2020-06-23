@@ -23,22 +23,23 @@
 module PC_MUX #(
 	parameter len = 32
 	) (
-	//input [len-1:0] jump,
+	input [len-1:0] i_jump,
 	input [len-1:0] i_branch,
-	//input [len-1:0] register,
+	input [len-1:0] i_register,
 	input [len-1:0] i_PC,
-	input i_select,
+	input [2:0] i_select,
 	output reg [len-1:0] o_PC_MUX
     );
 
     always @(*) 
     begin
-    	if(i_select)
-    		//3'b 100: out_mux_PC <= jump;
-    		//3'b 010: out_mux_PC <= register;
-    	   o_PC_MUX <= i_branch;
-    	else
-    	   o_PC_MUX <= i_PC;
+    	case (i_select)
+    		3'b 100: o_PC_MUX <= i_jump;
+    		3'b 010: o_PC_MUX <= i_register;
+    		3'b 001: o_PC_MUX <= i_branch;
+    		default: o_PC_MUX <= i_PC; 
+    	endcase    
+
    	end
 	    
 endmodule

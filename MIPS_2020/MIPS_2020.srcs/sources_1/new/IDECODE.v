@@ -33,7 +33,7 @@ module IDECODE #(
 	input reset,
 	input [len-1:0] i_pcBranch,
 	input [len-1:0] i_instruction,
-	input i_regWrite,
+	input i_flagRegWrite,
 	input [len-1:0] i_writeData,
 	input [NB-1:0] i_writeRegister,
 	input i_flush,
@@ -42,15 +42,15 @@ module IDECODE #(
 	output reg [len-1:0] o_pcBranch,
 	output [len-1:0] o_pcJump,	
 	output [len-1:0] o_pcJumpRegister,	
-	output [len-1:0] o_registerData1,
-	output [len-1:0] o_registerData2,
+	output [len-1:0] o_registerDataA,
+	output [len-1:0] o_registerDataB,
 	output reg [len-1:0] o_signExtend,
 	output reg [NB-1:0] o_rt,
 	output reg [NB-1:0] o_rd,
 	output reg [NB-1:0] o_rs,
 	output reg [NB-1:0] o_shamt,
 
-	output [len-1:0] o_register1Recolector,	// para recolector en modo debug
+	output [len-1:0] o_registerARecolector,	// para recolector en modo debug
 	output reg o_haltFlag_ID,
 
 	// señales de control
@@ -61,7 +61,7 @@ module IDECODE #(
 	output reg [len_wb_bus-1:0] o_signalControlWB,
 
 	//señal de control de riesgos
-	output stall_flag
+	output i_stallFlag
     );
 
 	wire [len_exec_bus-1:0] w_signalControlEX;
@@ -81,12 +81,12 @@ module IDECODE #(
 	assign o_pcJump = (i_flush) ? (0) : ({i_pcBranch[31:28], {2'b 00, (i_instruction[25:0])}});
 	assign o_pcJumpRegister = (i_flush) ? (0) : (w_outRegisterData1);
 
-	assign o_register1Recolector = w_outRegisterData1; // para recolector en modo debug
+	assign o_registerARecolector = w_outRegisterData1; // para recolector en modo debug
 	
-    assign o_registerData1 = (i_flush) ? (0) : (w_registerData1); 
-    assign o_registerData2 = (i_flush) ? (0) : (w_registerData2);
+    assign o_registerDataA = (i_flush) ? (0) : (w_registerData1); 
+    assign o_registerDataB = (i_flush) ? (0) : (w_registerData2);
 
-    assign stall_flag = (i_flush) ? (0) : (w_muxControl);
+    assign i_stallFlag = (i_flush) ? (0) : (w_muxControl);
 
 	CONTROL_SIGNALS #()
 		CONTROL_SIGNALS(
@@ -106,7 +106,7 @@ module IDECODE #(
 			.clk(clk),
 			//.ctrl_clk_mips(ctrl_clk_mips),
 			.reset(reset),
-			.i_regWrite(i_regWrite),
+			.i_flagRegWrite(i_flagRegWrite),
 			.i_readRegister1(i_instruction[25:21]),
 			.i_readRegister2(i_instruction[20:16]),
 			.i_writeRegister(i_writeRegister),
@@ -163,7 +163,7 @@ module IDECODE #(
 			else 
 			begin			
 				o_pcBranch <= i_pcBranch;
-				o_signExtend <= $signed(i_instruction[15:0]);
+				o_signExtend <= $signed(i_instruction[15:0]);    
 				o_rt <= i_instruction [20:16];
 				o_rd <= i_instruction [15:11];
 				o_rs <= i_instruction [25:21];
