@@ -32,7 +32,7 @@ module DATA_RAM #(
   input clka,                           // Clock
   //input ctrl_clk_mips,
   input i_writeEnable,                            // Write enable
-  input enable,                            // RAM Enable, for additional power savings, disable port when not in use
+  input enable, //TODO: analizar cambio de nombre a i_readEnable        // RAM Enable, for additional power savings, disable port when not in use
   output [RAM_WIDTH-1:0] o_dataD,         // RAM output data
   output [RAM_WIDTH-1:0] o_wire_dataD     // RAM output data wire
 );
@@ -65,7 +65,7 @@ module DATA_RAM #(
     
 		if (i_writeEnable)
 			BRAM[i_addressD] <= i_dataD;
-		if (enable)
+		if (enable) //si señal de control memRead = 1
 			ram_data <= BRAM[i_addressD];
     //end
   end

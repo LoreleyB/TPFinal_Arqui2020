@@ -35,7 +35,8 @@ module CONTROL_SIGNALS#(
     output reg [LEN_MEM_BUS-1:0] o_signalControlME,
     	// SB, SH, LB, LH, Unsigned, Branch, MemRead, MemWrite
     output reg [LEN_WB_BUS-1:0] o_signalControlWB
-    	// RegWrite, MemtoReg
+    	// RegWrite: escribe en registro, load y tipoR
+    	// MemtoReg: si dato viene de memoria o Alu, Load = 1, tipoR = 0
     );
 
 	reg [2:0] r_aluOp;

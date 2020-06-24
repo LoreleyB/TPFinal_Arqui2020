@@ -159,6 +159,7 @@ module IEXECUTE #(
 				o_signalControlME <= i_signalControlME;
 				o_signalControlWB <= i_signalControlWB;
 				o_pcBranch <= i_pcBranch + i_signExtend;
+				
 				o_alu <= w_aluOut;
 				o_dataRegB <= i_dataRegB;
 				o_writeReg <= i_signalControlEX[9] ? (5'b 11111) : (i_signalControlEX[8] ? i_rd : i_rt);

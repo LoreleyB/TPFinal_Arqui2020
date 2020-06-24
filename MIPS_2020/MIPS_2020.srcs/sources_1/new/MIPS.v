@@ -63,13 +63,13 @@ module MIPS#(
 				   w_registerDataA,
 				   w_registerDataB,
 				   w_signExtend,
-				   connect_alu_out,
-				   connect_write_data_5_2,
-				   connect_read_data,
-				   connect_out_addr_mem,
-				   connect_write_data_3_4,
-				   connect_in_pc_branch_3_4,
-				   connect_in_pc_branch_4_1,
+				   w_aluResult,
+				   w_writeData_WBID,  //y además entra a los MUXA y MUXB determinados por FW
+				   w_readData,
+				   w_addressMem_aluResult,
+				   w_writeData_EXMEM,
+				   w_pcBranch_EXMEM,
+				   w_pcBranch_MEMIF, //No deberia salir de DECODE????? esta saliendo de MEM y va a IF
 				   w_registerARecolector,
 				   w_wireMem,
 				   w_PC;
@@ -100,7 +100,7 @@ module MIPS#(
 	     connect_halt_flag_3_4,
 	     w_haltFlag_MEWB; 
 
-	assign connect_write_data_5_2 = (connect_out_writeBack_bus[0]) ? connect_read_data : connect_out_addr_mem;
+	assign w_writeData_WBID = (connect_out_writeBack_bus[0]) ? w_readData : w_addressMem_aluResult;//si MemtoReg=1 entoces toma dato de memoria, sino toma resultado de Alu, ultimo mux
 
 	assign o_registerARecolector = w_registerARecolector;
 	assign o_wireMem = w_wireMem;
@@ -130,8 +130,8 @@ module MIPS#(
 		connect_writeBack_bus_3_4, // 2 bits
 		connect_write_reg_3_4, // 5 bits
 		connect_zero_flag, // 1 bit
-		connect_alu_out, // 32 bits
-		connect_in_pc_branch_3_4, // 32 bits
+		w_aluResult, // 32 bits
+		w_pcBranch_EXMEM, // 32 bits
 		w_registerDataB // 32 bits
 	};
 	assign o_latches_MEMWB = {	// 3 registros
@@ -139,8 +139,8 @@ module MIPS#(
 		w_haltFlag_MEWB, // 1 bit
 		connect_write_reg_4_2, // 5 bits
 		connect_out_writeBack_bus, // 2 bits
-		connect_out_addr_mem, // 32 bits
-		connect_read_data // 32 bits
+		w_addressMem_aluResult, // 32 bits
+		w_readData // 32 bits
 	};
 
 	IFETCH #(
@@ -152,7 +152,7 @@ module MIPS#(
 			.reset(reset),
 			.i_pcSrc({connect_flag_jump, connect_flag_jump_register, connect_branch_flag}),
 			.i_pcJump(w_pcJump),
-			.i_pcBranch(connect_in_pc_branch_4_1),
+			.i_pcBranch(w_pcBranch_MEMIF),
 			.i_pcRegister(w_pcJumpRegister),
 			.i_stallFlag(!connect_stall_flag),
 
@@ -177,7 +177,7 @@ module MIPS#(
 			.i_pcBranch(w_pcBranch_IFID),
 			.i_instruction(i_debugFlag ? {{6{1'b0}}, i_addressDebug[4:0], {21{1'b0}}} : w_instruccion),
 			.i_flagRegWrite(connect_out_writeBack_bus[1]),
-			.i_writeData(connect_write_data_5_2),
+			.i_writeData(w_writeData_WBID),
 			.i_writeRegister(connect_write_reg_4_2),
 			.i_flush(connect_branch_flag),
 			.i_haltFlag_ID(connect_halt_flag_1_2),
@@ -235,16 +235,16 @@ module MIPS#(
 			.i_rd_MEMWB(connect_write_reg_4_2),
 			.i_rs(connect_rs),
 
-			.i_dataMEM_FW(connect_alu_out),
-			.i_dataWB_FW(connect_write_data_5_2),
+			.i_dataMEM_FW(w_aluResult),
+			.i_dataWB_FW(w_writeData_WBID),
 			.i_flush(connect_branch_flag),
 		
 		    .i_haltFlag_EX(connect_halt_flag_2_3),
 			
-			.o_pcBranch(connect_in_pc_branch_3_4),
-			.o_alu(connect_alu_out),
+			.o_pcBranch(w_pcBranch_EXMEM),
+			.o_alu(w_aluResult),
 			.o_zeroFlag(connect_zero_flag),
-			.o_dataRegB(connect_write_data_3_4),
+			.o_dataRegB(w_writeData_EXMEM),
 			.o_writeReg(connect_write_reg_3_4),
 		
 			.o_haltFlag_EX(connect_halt_flag_3_4),
@@ -261,23 +261,23 @@ module MIPS#(
 			.clk(clk),
 			//.ctrl_clk_mips(ctrl_clk_mips),
 			.reset(reset),
-			.i_addressMem(i_debugFlag ? i_addressDebug : connect_alu_out),
-			.i_writeData(connect_write_data_3_4),
+			.i_addressMem(i_debugFlag ? i_addressDebug : w_aluResult),
+			.i_writeData(w_writeData_EXMEM),
 			
 			.i_signalControlME(connect_memory_bus_3_4),
 		    .i_signalControlWB(connect_writeBack_bus_3_4),
 			.i_writeReg(connect_write_reg_3_4),			
 			.i_zeroFlag(connect_zero_flag),
-			.i_pcBranch(connect_in_pc_branch_3_4),
+			.i_pcBranch(w_pcBranch_EXMEM),
 
 			.i_haltFlag_MEM(connect_halt_flag_3_4),
 			
 			//outputs		
-			.o_readData(connect_read_data),
+			.o_readData(w_readData),
 			.o_pcSrc(connect_branch_flag),
-			.o_pcBranch(connect_in_pc_branch_4_1),
+			.o_pcBranch(w_pcBranch_MEMIF),
 		    .o_signalControlWB(connect_out_writeBack_bus),
-			.o_addressMem(connect_out_addr_mem),
+			.o_addressMem(w_addressMem_aluResult),//se usa como entrada al MUX de la etapa WB, es el resultado de la ALU. Ver de hacer la etapa WB
 			.o_writeReg(connect_write_reg_4_2),
 
 			.o_wireMem(w_wireMem), // para debug

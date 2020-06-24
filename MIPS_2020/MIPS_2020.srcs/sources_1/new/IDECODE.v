@@ -163,7 +163,8 @@ module IDECODE #(
 			else 
 			begin			
 				o_pcBranch <= i_pcBranch;
-				o_signExtend <= $signed(i_instruction[15:0]);    
+				o_signExtend <= $signed(i_instruction[15:0]);   
+				 
 				o_rt <= i_instruction [20:16];
 				o_rd <= i_instruction [15:11];
 				o_rs <= i_instruction [25:21];
