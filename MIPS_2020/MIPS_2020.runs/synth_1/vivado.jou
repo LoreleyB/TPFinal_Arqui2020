@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Jun 19 17:59:46 2020
-# Process ID: 11820
+# Start of session at: Thu Jun 25 20:24:35 2020
+# Process ID: 20376
 # Current directory: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1
-# Command line: vivado.exe -log IFETCH.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source IFETCH.tcl
-# Log file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1/IFETCH.vds
+# Command line: vivado.exe -log MIPS.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS.tcl
+# Log file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1/MIPS.vds
 # Journal file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source IFETCH.tcl -notrace
+source MIPS.tcl -notrace

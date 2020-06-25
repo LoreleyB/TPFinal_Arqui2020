@@ -43,7 +43,7 @@ module PC#(
                 o_PC = i_PC;
             end
 
-            else begin
+        else begin
                 o_PC = o_PC;
             end
         end

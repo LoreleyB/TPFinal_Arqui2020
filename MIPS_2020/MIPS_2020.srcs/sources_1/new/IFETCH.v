@@ -43,7 +43,7 @@ module IFETCH #(
 	output reg o_haltFlag_IF // para debug
     );
 
-    wire [len-1:0] w_sumadorMux; 
+    wire [len-1:0] w_pcSumadorMux; 
     wire [len-1:0] w_muxPc;
     wire [len-1:0] w_pctoSumadorMem;
     wire [len-1:0] w_instruction;

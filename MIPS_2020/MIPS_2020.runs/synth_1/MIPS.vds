@@ -1,13 +1,14 @@
-
-*** Running vivado
-    with args -log MIPS.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS.tcl
-
-
-****** Vivado v2019.2 (64-bit)
-  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Jun 25 20:24:35 2020
+# Process ID: 20376
+# Current directory: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1
+# Command line: vivado.exe -log MIPS.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS.tcl
+# Log file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1/MIPS.vds
+# Journal file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source MIPS.tcl -notrace
 Command: synth_design -top MIPS -part xc7a35ticpg236-1L
 Starting synth_design

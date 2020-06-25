@@ -61,7 +61,7 @@ module IDECODE #(
 	output reg [len_wb_bus-1:0] o_signalControlWB,
 
 	//señal de control de riesgos
-	output i_stallFlag
+	output o_stallFlag
     );
 
 	wire [len_exec_bus-1:0] w_signalControlEX;
@@ -86,7 +86,7 @@ module IDECODE #(
     assign o_registerDataA = (i_flush) ? (0) : (w_registerData1); 
     assign o_registerDataB = (i_flush) ? (0) : (w_registerData2);
 
-    assign i_stallFlag = (i_flush) ? (0) : (w_muxControl);
+    assign o_stallFlag = (i_flush) ? (0) : (w_muxControl);
 
 	CONTROL_SIGNALS #()
 		CONTROL_SIGNALS(
