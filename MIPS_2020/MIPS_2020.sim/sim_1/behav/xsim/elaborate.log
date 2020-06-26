@@ -1,0 +1,19 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_IFETCH_behav xil_defaultlib.TB_IFETCH xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'i_pcJump' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_IFETCH.v:40]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC_MUX
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.INSTRUCTION_RAM(RAM_PERFORMANCE=...
+Compiling module xil_defaultlib.PC_SUM
+Compiling module xil_defaultlib.IFETCH
+Compiling module xil_defaultlib.TB_IFETCH
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TB_IFETCH_behav

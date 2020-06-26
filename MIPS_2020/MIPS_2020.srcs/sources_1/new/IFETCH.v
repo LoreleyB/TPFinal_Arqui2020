@@ -80,13 +80,12 @@ module IFETCH #(
 	INSTRUCTION_RAM #(
 		.RAM_WIDTH(len),
 		.RAM_DEPTH(2048),
-		// .INIT_FILE("/home/facundo/Desktop/practico_arquitectura_de_computadoras/TP4_MIPS/program.hex"),
-		// .INIT_FILE("/home/maguerreberry/practico_arquitectura_de_computadoras/TP4_MIPS/program.hex"),
-        // .INIT_FILE("E:/Drive/Facultad/quinto/Arquitectura_de_Computadoras/TP4_MIPS/program.hex"),
+		 .INIT_FILE("C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex"),
 		.RAM_PERFORMANCE("LOW_LATENCY")
 		)
 		INSTRUCTION_RAM(
-			.i_addressI(i_debugFlag ? i_addressDebug : w_pctoSumadorMem),
+			//.i_addressI(i_debugFlag ? i_addressDebug : w_pctoSumadorMem),
+			.i_addressI(w_pctoSumadorMem),
 			.clka(clk),
 			.reset(reset),
 			.enable(i_stallFlag),
