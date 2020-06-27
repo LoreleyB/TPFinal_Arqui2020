@@ -1,12 +1,12 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IFETCH.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module IFETCH
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module INSTRUCTION_RAM
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PC
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC_MUX.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PC_MUX
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC_SUM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PC_SUM
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_IFETCH.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TB_IFETCH
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/ALU_CONTROL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_CONTROL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/CONTROL_SIGNALS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONTROL_SIGNALS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/HAZARD_DETECTION.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HAZARD_DETECTION
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IDECODE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDECODE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/RW_REGISTERS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RW_REGISTERS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_IDECODE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_IDECODE

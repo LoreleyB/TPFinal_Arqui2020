@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../MIPS_2020.srcs/sources_1/new/ALU_CONTROL.v" \
+"../../../../MIPS_2020.srcs/sources_1/new/CONTROL_SIGNALS.v" \
+"../../../../MIPS_2020.srcs/sources_1/new/HAZARD_DETECTION.v" \
+"../../../../MIPS_2020.srcs/sources_1/new/IDECODE.v" \
+"../../../../MIPS_2020.srcs/sources_1/new/RW_REGISTERS.v" \
+"../../../../MIPS_2020.srcs/sim_1/new/TB_IDECODE.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
