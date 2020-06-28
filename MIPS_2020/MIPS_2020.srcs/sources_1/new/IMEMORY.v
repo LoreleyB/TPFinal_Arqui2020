@@ -41,7 +41,7 @@ module IMEMORY #(
 	input i_haltFlag_MEM,
 
 	output reg [len-1:0] o_readData,
-	output o_pcSrc,
+	output o_flagBranch,
 	output [len-1:0] o_pcBranch,
     output reg [1:0] o_signalControlWB,
 	output reg [len-1:0] o_addressMem,
@@ -79,8 +79,8 @@ module IMEMORY #(
 		   w_branchNotEqual   = i_signalControlME[8];
 
 	assign o_pcBranch = i_pcBranch;
-	assign o_pcSrc = w_branch && ((w_branchNotEqual) ? (~i_zeroFlag) : (i_zeroFlag));	// la señal de Branch se activa con ambas intrucciones de branch, la otra señal te indica cual de las 2 fue
-
+	assign o_flagBranch = w_branch && ((w_branchNotEqual) ? (~i_zeroFlag) : (i_zeroFlag));	// la señal de Branch se activa con ambas intrucciones de branch, la otra señal te indica cual de las 2 fue
+    // o_flagBranch es el bit menos significativo de i_pcSrc[2:0] de FETH
 	assign o_wireMem = w_dataOut_debug;
 
 	DATA_RAM #(

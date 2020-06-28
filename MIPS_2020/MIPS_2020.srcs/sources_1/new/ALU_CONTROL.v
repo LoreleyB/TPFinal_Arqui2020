@@ -55,7 +55,7 @@ module ALU_CONTROL(
 			3'b011 : o_aluCode <= 4'b0110; //or
 			3'b100 : o_aluCode <= 4'b0111; //xor
 			3'b101 : o_aluCode <= 4'b0000; //shift left
-			3'b110 : o_aluCode <= 4'b0100; //compare 
+			3'b110 : o_aluCode <= 4'b0100; //compare BEQ
 			3'b111 : o_aluCode <= 4'b1001; // INSTRUCCION LUI -> SHIFT 16 IZQUIERDA
 			default: o_aluCode <= 4'b0000;	
 		endcase

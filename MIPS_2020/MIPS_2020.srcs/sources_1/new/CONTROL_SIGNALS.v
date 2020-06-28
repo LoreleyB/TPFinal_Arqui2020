@@ -33,7 +33,8 @@ module CONTROL_SIGNALS#(
     output reg [LEN_EXEC_BUS-1:0] o_signalControlEX,
     	// Jump&Link, JALOnly, RegDst, ALUSrc1, ALUSrc2, jump, jump register, ALUCode [4]
     output reg [LEN_MEM_BUS-1:0] o_signalControlME,
-    	// SB, SH, LB, LH, Unsigned, Branch, MemRead, MemWrite
+    	// branchNotEqual, SB, SH, LB, LH, controlUnsigned, Branch, MemRead, MemWrite
+      	
     output reg [LEN_WB_BUS-1:0] o_signalControlWB
         //RegWrite, MemtoReg
     	// RegWrite: escribe en registro, load y tipoR (1)

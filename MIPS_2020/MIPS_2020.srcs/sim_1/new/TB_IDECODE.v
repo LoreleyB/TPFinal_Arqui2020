@@ -69,12 +69,12 @@ module TB_IDECODE(
 		#30
 
 		i_flagRegWrite = 0;
-		//i_instruction = `LEN'b00000000001000100010000000100001; //opcode = 0, rs = 1, rt = 2, rd = 4, shamp = 0, function = ADDU
-		i_instruction = `LEN'b00000000000000010010000000100001; //opcode = 0, rs = 0, rt = 1, rd = 4, shamp = 0, function = ADDU
+		//i_instruction = `LEN'b00000000001000100010000000100001; //opcode = 0, rs = 1, rt = 2, rd = 4, shamt = 0, function = ADDU
+		i_instruction = `LEN'b00000000000000010010000000100001; //opcode = 0, rs = 0, rt = 1, rd = 4, shamt = 0, function = ADDU
 
 		#15
 
-		i_instruction = `LEN'b00000000011001100011000000100001;//opcode = 0, rs = 3, rt = 6, rd = 6, shamp = 0, function = ADDU
+		i_instruction = `LEN'b00000000011001100011000000100001;//opcode = 0, rs = 3, rt = 6, rd = 6, shamt = 0, function = ADDU
 
 		// #20
 		// reset = 1;

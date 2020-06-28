@@ -61,7 +61,7 @@ module ALU #(
 			
 			4'b 0100: 
 			begin
-				o_result = i_dataA < i_dataB; //LUI
+				o_result = i_dataA < i_dataB; //slt, compare, si a < b, result = 1 
 				o_zeroFlag = i_dataA == i_dataB ? 1 : 0; //BRANCH
 			end
 
@@ -70,7 +70,8 @@ module ALU #(
 			4'b 0111: o_result = i_dataA ^ i_dataB; //xor
 			4'b 1000: o_result = ~(i_dataA | i_dataB); //nor
 			4'b 1001: o_result = i_dataB << 16; //LUI
-			4'b 1010: o_result = i_dataA - i_dataB; //restar
+			4'b 1010: o_result = i_dataA - i_dataB; //sub
+			
 			default: o_result = 0;
 		endcase	
 	end

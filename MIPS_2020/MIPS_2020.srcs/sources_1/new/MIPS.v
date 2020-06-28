@@ -150,7 +150,7 @@ module MIPS#(
 			.clk(clk),
 			//.ctrl_clk_mips(ctrl_clk_mips),
 			.reset(reset),
-			.i_pcSrc({w_flagJump, w_flagJumpRegister, w_flagBranch}),
+			.i_pcSrc({w_flagJump, w_flagJumpRegister, w_flagBranch}), 
 			.i_pcJump(w_pcJump),
 			.i_pcBranch(w_pcBranch_MEMIF),
 			.i_pcRegister(w_pcJumpRegister),
@@ -274,7 +274,7 @@ module MIPS#(
 			
 			//outputs		
 			.o_readData(w_readData),
-			.o_pcSrc(w_flagBranch),
+			.o_flagBranch(w_flagBranch), //confirma BEQ y BNEQ
 			.o_pcBranch(w_pcBranch_MEMIF),
 		    .o_signalControlWB(w_signalControlWB_bus),
 			.o_addressMem(w_addressMem_aluResult),//se usa como entrada al MUX de la etapa WB, es el resultado de la ALU. Ver de hacer la etapa WB
