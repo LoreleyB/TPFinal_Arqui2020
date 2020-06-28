@@ -76,7 +76,9 @@ module IEXECUTE #(
     				w_muxB_alu_FW;
 
 	wire [len-1:0] w_aluOpA = i_signalControlEX[10] ? (i_pcBranch) : (i_signalControlEX[7] ? ({{27{1'b 0}}, i_shamt}) : w_muxA_alu_FW);
+	//si Jump&Link=1 => w_aluOpA = i_pcBranxh, sino, si Aluscr1 = 1 => w_aluOpA = i_shamt (SHIFT) sino w_aluOpA = MUXA de FW
 	wire [len-1:0] w_aluOpB = i_signalControlEX[10] ? (1'b 1) : (i_signalControlEX[6] ? i_signExtend : w_muxB_alu_FW);
+	//si Jump&Link=1 => w_aluOpB = 1, sino, si Aluscr2 = 1 => w_aluOpB = i_signExtend (offset) sino w_aluOpB = MUXB de FW 
 	wire [len-1:0] w_aluOut;
 	wire w_zeroFlag;
 
@@ -163,6 +165,7 @@ module IEXECUTE #(
 				o_alu <= w_aluOut;
 				o_dataRegB <= i_dataRegB;
 				o_writeReg <= i_signalControlEX[9] ? (5'b 11111) : (i_signalControlEX[8] ? i_rd : i_rt);
+				//si es JALOnly => o_writeReg = 11111 sino, si RegDst = 1 ?> o_writeReg = i_rd, sino o_writeReg = i_rt
 				o_zeroFlag <= w_zeroFlag;
 			end
 		end

@@ -71,7 +71,6 @@ module ALU #(
 			4'b 1000: o_result = ~(i_dataA | i_dataB); //nor
 			4'b 1001: o_result = i_dataB << 16; //LUI
 			4'b 1010: o_result = i_dataA - i_dataB; //sub
-			
 			default: o_result = 0;
 		endcase	
 	end

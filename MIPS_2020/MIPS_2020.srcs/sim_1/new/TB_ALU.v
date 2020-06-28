@@ -106,6 +106,11 @@ module TB_ALU(
 		i_dataA = `lenghtIN'h4;
 		i_dataB = `lenghtIN'h5;
 		i_opCode = `lenghtOP'b0100; //slt compare
+		#10
+
+		i_dataA = `lenghtIN'h15;
+		i_dataB = `lenghtIN'h10;
+		i_opCode = `lenghtOP'b1010; //sub
 
 	end
 
