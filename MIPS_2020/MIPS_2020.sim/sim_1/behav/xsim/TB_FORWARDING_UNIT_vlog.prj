@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../MIPS_2020.srcs/sources_1/new/FORWARDING_UNIT.v" \
+"../../../../MIPS_2020.srcs/sim_1/new/TB_FORWARDING_UNIT.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

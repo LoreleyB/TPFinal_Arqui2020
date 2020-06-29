@@ -61,7 +61,7 @@ module IMEMORY #(
 			w_control_SB,
 			w_branchNotEqual;
 
-	reg [len-1:0] 	r_muxDataIn;	
+	reg [len-1:0] 	r_dataIn;	
 	wire [len-1:0]	w_dataOut;
 	wire [len-1:0]	w_dataOut_debug;
 
@@ -79,7 +79,8 @@ module IMEMORY #(
 		   w_branchNotEqual   = i_signalControlME[8];
 
 	assign o_pcBranch = i_pcBranch;
-	assign o_flagBranch = w_branch && ((w_branchNotEqual) ? (~i_zeroFlag) : (i_zeroFlag));	// la señal de Branch se activa con ambas intrucciones de branch, la otra señal te indica cual de las 2 fue
+	assign o_flagBranch = w_branch && ((w_branchNotEqual) ? (~i_zeroFlag) : (i_zeroFlag));	
+	// la señal de Branch se activa con ambas intrucciones de branch, la otra señal te indica cual de las 2 fue
     // o_flagBranch es el bit menos significativo de i_pcSrc[2:0] de FETH
 	assign o_wireMem = w_dataOut_debug;
 
@@ -90,7 +91,7 @@ module IMEMORY #(
 		)
 		DATA_RAM(
 			.i_addressD(i_addressMem),
-			.i_dataD(r_muxDataIn),
+			.i_dataD(r_dataIn),
 			.clka(clk),
 			//.ctrl_clk_mips(ctrl_clk_mips),
 			.i_writeEnable(w_memWrite),
@@ -119,7 +120,7 @@ module IMEMORY #(
 			o_addressMem <= i_addressMem;
 			o_writeReg <= i_writeReg;
 
-			if (w_control_LH) 
+			if (w_control_LH) //Load Half Word
 			begin
 				if (w_controlUnsigned) 
 				begin
@@ -130,20 +131,20 @@ module IMEMORY #(
 					o_readData <= {{16{w_dataOut[15]}},w_dataOut[15:0]};				
 				end
 			end
-			else if (w_control_LB) 
+			else if (w_control_LB) //Load Byte
 			begin
 				if (w_controlUnsigned) 
 				begin
-					o_readData <= {{24{1'b 0}},w_dataOut[7:0]};
+					o_readData <= {{24{1'b 0}},w_dataOut[7:0]};//0x24, w_dataOut[7:0]
 				end
 				else 
 				begin
-					o_readData <= {{24{w_dataOut[7]}},w_dataOut[7:0]};				
+					o_readData <= {{24{w_dataOut[7]}},w_dataOut[7:0]};	//1x24, w_dataOut[7:0]			
 				end
 			end
 			else 
 			begin
-				o_readData <= w_dataOut;				
+				o_readData <= w_dataOut;//LW				
 			end
 		end
 	end
@@ -151,17 +152,17 @@ module IMEMORY #(
 	always @(*)
 	begin
 
-		if (w_control_SH) 
+		if (w_control_SH) // Store Half Word
 		begin
-			r_muxDataIn <= {{16{i_writeData[15]}},i_writeData[15:0]};				
+			r_dataIn <= {{16{i_writeData[15]}},i_writeData[15:0]};				
 		end
-		else if (w_control_SB) 
+		else if (w_control_SB) //Store Byte
 		begin
-			r_muxDataIn <= {{24{i_writeData[7]}},i_writeData[7:0]};				
+			r_dataIn <= {{24{i_writeData[7]}},i_writeData[7:0]};				
 		end
 		else 
 		begin
-			r_muxDataIn <= i_writeData;				
+			r_dataIn <= i_writeData; //SW			
 		end
 
 

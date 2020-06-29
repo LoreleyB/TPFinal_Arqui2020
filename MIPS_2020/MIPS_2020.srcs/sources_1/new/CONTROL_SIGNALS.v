@@ -148,9 +148,9 @@ module CONTROL_SIGNALS#(
 			end
 			6'b001000 :
 			begin //ADDI
-				o_signalControlEX[LEN_EXEC_BUS-1:4] <= 7'b0000100;
+				o_signalControlEX[LEN_EXEC_BUS-1:4] <= 7'b0000100; //alusrc2
 				r_aluOp <= 3'b001;
-				o_signalControlME <= 9'b000000100;
+				o_signalControlME <= 9'b000000100;//branch??
 				o_signalControlWB <= 2'b10;
 			end
 			6'b001100 :

@@ -48,8 +48,8 @@ module TB_FORWARDING_UNIT(
 	initial begin
 		CLK100MHZ = 0;
 
-		i_registerWrite_EXMEM = 0;
-		i_registerWrite_MEMWB = 0;
+		i_registerWrite_EXMEM = 0;//no escribe
+		i_registerWrite_MEMWB = 0;//no escribe
 		i_rd_EXMEM = 1;
 		i_rd_MEMWB = 1;
 		
@@ -85,8 +85,8 @@ module TB_FORWARDING_UNIT(
 		#10
 
 		i_registerWrite_EXMEM = 0;
-		i_registerWrite_MEMWB = 1;
-		i_rd_EXMEM = 1;
+		i_registerWrite_MEMWB = 1;// i-2 escribe en reg
+		i_rd_EXMEM = 1; 
 		i_rd_MEMWB = 1;
 		
 		i_rs_IDEX = 0;
@@ -189,6 +189,15 @@ module TB_FORWARDING_UNIT(
 		i_rd_MEMWB = 0;
 		
 		i_rs_IDEX = 0;
+
+		#10
+
+		i_registerWrite_EXMEM = 1;
+		i_registerWrite_MEMWB = 1;
+		i_rd_EXMEM = 0;
+		i_rd_MEMWB = 0;
+		
+		i_rt_IDEX = 0;
 
 	end
 
