@@ -32,6 +32,7 @@ module CONTROL_SIGNALS#(
     // junto las salidas en buses para mas prolijidad
     output reg [LEN_EXEC_BUS-1:0] o_signalControlEX,
     	// Jump&Link, JALOnly, RegDst, ALUSrc1, ALUSrc2, jump, jump register, ALUCode [4]
+    	
     output reg [LEN_MEM_BUS-1:0] o_signalControlME,
     	// branchNotEqual, SB, SH, LB, LH, controlUnsigned, Branch, MemRead, MemWrite
       	

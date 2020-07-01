@@ -100,7 +100,8 @@ module MIPS#(
 	     w_haltFlag_EXMEM,
 	     w_haltFlag_MEMWB; 
 
-	assign w_writeData_WBID = (w_signalControlWB_bus[0]) ? w_readData : w_addressMem_aluResult;//si MemtoReg=1 entoces toma dato de memoria, sino toma resultado de Alu, ultimo mux
+	assign w_writeData_WBID = (w_signalControlWB_bus[0]) ? w_readData : w_addressMem_aluResult;
+	//si MemtoReg=1 entoces toma dato de memoria, sino toma resultado de Alu, ultimo mux
 
 	assign o_registerARecolector = w_registerARecolector;
 	assign o_wireMem = w_wireMem;
@@ -175,7 +176,7 @@ module MIPS#(
 			//.ctrl_clk_mips(ctrl_clk_mips),
 			.reset(reset),
 			.i_pcBranch(w_pcBranch_IFID),
-			.i_instruction(i_debugFlag ? {{6{1'b0}}, i_addressDebug[4:0], {21{1'b0}}} : w_instruccion),
+			.i_instruction(i_debugFlag ? {{6{1'b0}}, i_addressDebug[4:0], {21{1'b0}}} : w_instruccion),//ANALIZAR i_debugFlag y i_addressDebug
 			.i_flagRegWrite(w_signalControlWB_bus[1]),
 			.i_writeData(w_writeData_WBID),
 			.i_writeRegister(w_writeReg_MEMID),

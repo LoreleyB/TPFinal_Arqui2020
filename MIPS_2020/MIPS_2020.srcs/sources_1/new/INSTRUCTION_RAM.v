@@ -43,7 +43,9 @@ module INSTRUCTION_RAM #(
   reg [RAM_WIDTH-1:0] BRAM [RAM_DEPTH-1:0];
   reg [RAM_WIDTH-1:0] ram_data = {RAM_WIDTH{1'b0}};
 
-  assign o_validI = &BRAM[i_addressI][RAM_WIDTH-1:RAM_WIDTH-6];// verifica si hay un opcode valido (distinto de cero). Hace AND de los bits 31 al 26 de la PC 
+  assign o_validI = &BRAM[i_addressI][RAM_WIDTH-1:RAM_WIDTH-6];  
+   // verifica si el opcode es 111111, si lo hace stallFlag. Hace & (AND) bit a bit de los bits 31 al 26 de la PC 
+   
 
   // The following code either initializes the memory values to a specified file or to all zeros to match hardware
   generate
