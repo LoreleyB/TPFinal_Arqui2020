@@ -11610,3 +11610,297 @@ selectCodeEditor("ram_instrucciones.v", 267, 350, false, false, false, false, tr
 selectCodeEditor("ram_instrucciones.v", 206, 346); // ch (w, cr)
 selectCodeEditor("ram_instrucciones.v", 206, 346, false, false, false, false, true); // ch (w, cr) - Double Click
 // [Engine Memory]: 913 MB (+9257kb) [338:28:55]
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/26/20, 9:11:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 90 MB. Current time: 6/26/20, 9:41:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 91 MB. Current time: 6/26/20, 10:11:50 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 90 MB. Current time: 6/26/20, 10:41:50 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 90 MB. Current time: 6/26/20, 11:11:50 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 90 MB. Current time: 6/26/20, 11:41:51 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 91 MB. Current time: 6/27/20, 12:11:51 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 91 MB. Current time: 6/27/20, 12:41:52 AM ART
+// WARNING: HTimer (StateMonitor Timer) is taking 30671966ms to process. Increasing delay to 7000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  30671966 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 91 MB. Current time: 6/27/20, 9:16:31 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 90 MB. Current time: 6/27/20, 9:46:34 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 90 MB. Current time: 6/27/20, 10:16:34 AM ART
+// Elapsed time: 49387 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v), u_instruction_fetch : instruction_fetch (instruction_fetch.v)]", 5); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 23, true); // B (F, cr) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_mem_instrucciones (tb_mem_instrucciones.v)]", 26); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 25, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 23, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 25, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 23); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v), u_decode : decode (decode.v)]", 24); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v), u_decode : decode (decode.v), u_hazard : hazard_detection_unit (hazard_detection_unit.v)]", 27, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 29, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 29); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v), u_hazard_detection_unit : hazard_detection_unit (hazard_detection_unit.v)]", 30, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 29, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 29, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 96 seconds
+selectCodeEditor("tb_hazard.v", 2, 62); // ch (w, cr)
+typeControlKey((HResource) null, "tb_hazard.v", 'c'); // ch (w, cr)
+// Elapsed time: 992 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 23, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 23, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("tb_decode.v", 1, 144); // ch (w, cr)
+typeControlKey((HResource) null, "tb_decode.v", 'c'); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 91 MB. Current time: 6/27/20, 10:46:34 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 11:16:35 AM ART
+// Elapsed time: 2669 seconds
+selectCodeEditor("tb_decode.v", 257, 125); // ch (w, cr)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("tb_decode.v", 216, 163); // ch (w, cr)
+selectCodeEditor("tb_decode.v", 259, 164); // ch (w, cr)
+selectCodeEditor("tb_decode.v", 295, 163); // ch (w, cr)
+selectCodeEditor("tb_decode.v", 330, 164); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("tb_decode.v", 492, 159); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 91 MB. Current time: 6/27/20, 11:46:35 AM ART
+// Elapsed time: 1142 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 25, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 25, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hazard (tb_hazard.v)]", 25, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top (tb_top.v)]", 21, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 23, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top (tb_top.v)]", 21, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v), u_alu : alu (alu.v)]", 23, false); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// PAPropertyPanels.initPanels (tb_forwarding_unit.v) elapsed time: 0.2s
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 25, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 25, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// PAPropertyPanels.initPanels (tb_alu.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_mem_instrucciones (tb_mem_instrucciones.v)]", 28, true); // B (F, cr) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 12:16:36 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 12:46:36 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 1:16:36 PM ART
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1031 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1030 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1029 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 624 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1028 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 622 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/27/20, 1:46:37 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10801761 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1601 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 4:53:27 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  9359994 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 7:29:36 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  1925 ms.
+// Elapsed time: 28375 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24); // B (F, cr)
+// Elapsed time: 67 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 23, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_instruction_fetch (tb_instruction_fetch.v)]", 19, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_doble_uart (tb_doble_uart.v)]", 20, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top_mips (tb_top_mips.v)]", 27, true); // B (F, cr) - Node
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_mem_instrucciones (tb_mem_instrucciones.v)]", 26, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top_mips (tb_top_mips.v)]", 27, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_decode (tb_decode.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v), u_alu : alu (alu.v)]", 23, false); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 25); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v), u_forwarding_unit : forwarding_unit (forwarding_unit.v)]", 26, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 25, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+// Elapsed time: 48 seconds
+selectCodeEditor("tb_forwarding_unit.v", 175, 87); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_alu (tb_alu.v)]", 22, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("tb_alu.v", 2, 129); // ch (w, cr)
+typeControlKey((HResource) null, "tb_alu.v", 'c'); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1509 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 7:59:36 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/27/20, 8:29:35 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 8:59:36 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  3461779 ms.
+// WARNING: HTimer (HMemoryUtils Timer) is taking 1178ms to process. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1178 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/27/20, 10:05:05 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  82413 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  10798918 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 1:26:36 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  1046 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  31286292 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 10:08:07 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  2786 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 6/28/20, 10:38:05 AM ART
+// Elapsed time: 54969 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v), u_forwarding_unit : forwarding_unit (forwarding_unit.v)]", 25, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_forwarding_unit (tb_forwarding_unit.v)]", 24, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("tb_forwarding_unit.v", 2, 132); // ch (w, cr)
+typeControlKey((HResource) null, "tb_forwarding_unit.v", 'c'); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/28/20, 11:08:05 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/28/20, 11:38:06 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 12:08:06 PM ART
+// Elapsed time: 4577 seconds
+selectCodeEditor("tb_forwarding_unit.v", 141, 184); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  10800429 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2235 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/28/20, 3:19:20 PM ART
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 10802788 ms. Increasing delay to 32408364 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  6784054 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1431 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 5:12:33 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  1648 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1782 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1907 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1985 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1906 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1984 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1907 ms to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 5:42:28 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 6:12:28 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 6:42:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 7:12:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/28/20, 7:42:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/28/20, 8:12:30 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  3614243 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2770 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/28/20, 9:28:48 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  1252 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 88 MB. Current time: 6/28/20, 9:58:45 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 6/28/20, 10:28:44 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 6/28/20, 10:58:44 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10800066 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2027 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 6/29/20, 2:01:17 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  1127 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  63780291 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1367 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2997 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 6/29/20, 7:44:29 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  4450 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 88 MB. Current time: 6/29/20, 8:14:28 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 88 MB. Current time: 6/29/20, 8:44:24 PM ART
+// Elapsed time: 116917 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top_mips (tb_top_mips.v)]", 27, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top_mips (tb_top_mips.v)]", 27, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top_mips (tb_top_mips.v)]", 27, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 10 seconds
+selectCodeEditor("tb_top_mips.v", 1, 79); // ch (w, cr)
+typeControlKey((HResource) null, "tb_top_mips.v", 'c'); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/29/20, 9:14:25 PM ART
+// Elapsed time: 2079 seconds
+selectCodeEditor("tb_top_mips.v", 244, 112); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top_mips (tb_top_mips.v)]", 27, true); // B (F, cr) - Node
+// Elapsed time: 13 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top_mips (tb_top_mips.v)]", 27); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_doble_uart (tb_doble_uart.v)]", 20, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top (tb_top.v)]", 21, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top (tb_top.v)]", 21, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("tb_top.v", 43, 235); // ch (w, cr)
+selectCodeEditor("tb_top.v", 354, 205); // ch (w, cr)
+selectCodeEditor("tb_top.v", 102, 165); // ch (w, cr)
+selectCodeEditor("tb_top.v", 84, 201); // ch (w, cr)
+// Elapsed time: 15 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("tb_top.v", 166, 130); // ch (w, cr)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("tb_top.v", 162, 174); // ch (w, cr)
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("tb_top.v", 214, 136); // ch (w, cr)
+selectCodeEditor("tb_top.v", 180, 128); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/29/20, 9:44:30 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  5273 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/29/20, 10:14:25 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  554267 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  10799911 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1304 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 6/30/20, 1:30:59 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  20245209 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 7:08:32 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  1915 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1023 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  6756787 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 9:09:32 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  11526 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  20537 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 9:39:41 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  13966 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 10:09:37 AM ART
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 337 ms. Decreasing delay to 2337 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  13359 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 10:39:39 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 11:09:28 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 11:39:28 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 12:09:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 12:39:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 1:09:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 1:39:30 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 2:09:30 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 2:39:30 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 3:09:31 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 3:39:31 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 4:09:31 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 4:39:31 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 5:09:32 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 6/30/20, 5:39:32 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 6:09:33 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 6:39:33 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 7:09:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 6/30/20, 7:39:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 8:09:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 8:39:35 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 6/30/20, 9:09:35 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10801203 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2427 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 12:33:55 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  32125626 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1408 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1334 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 9:29:30 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/1/20, 9:59:28 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 10:29:28 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 10:59:28 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 11:29:28 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 11:59:29 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  55948 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 12:29:33 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 12:59:33 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 1:29:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 1:59:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 2:29:35 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  4357 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 2:59:44 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 3:29:40 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/1/20, 3:59:41 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/1/20, 4:29:41 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 4:59:41 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 5:29:42 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 5:59:42 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  2214 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 6:29:44 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  8662 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 6:59:51 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  7461 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 7:29:53 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 7:59:48 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 8:29:48 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 8:59:48 PM ART

@@ -230,7 +230,8 @@ module MIPS#(
 			.i_signalControlME(w_signalControlME_IDEX),
 			.i_signalControlWB(w_signalControlWB_IDEX), 
 
-			.i_registerWrite_EXMEM(w_signalControlWB_EXMEM[1]),// señal RegWrite
+            //FW
+			.i_registerWrite_EXMEM(w_signalControlWB_EXMEM[1]),// señal RegWrite 
 			.i_registerWrite_MEMWB(w_signalControlWB_bus[1]),// señal RegWrite
 			.i_rd_EXMEM(w_writeReg_EXMEM),
 			.i_rd_MEMWB(w_writeReg_MEMID),
