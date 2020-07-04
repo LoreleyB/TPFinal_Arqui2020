@@ -40,7 +40,7 @@ module FORWARDING_UNIT #(
 	   //para registro rs, mux A
         //si inst i-2 escribe en registro y rd de inst i-2 = rs de inst i y (inst i-1 NO escribe en registro o rd de inst i-1
         // sea distinto del rs de isnt i)  
-		if(i_registerWrite_MEMWB == 1 & i_rd_MEMWB == i_rs_IDEX & (i_registerWrite_EXMEM == 0 | i_rd_EXMEM != i_rs_IDEX))
+		if((i_registerWrite_MEMWB == 1 & i_rd_MEMWB != 0) & i_rd_MEMWB == i_rs_IDEX & ((i_registerWrite_EXMEM == 0 & i_rd_EXMEM != 0) | i_rd_EXMEM != i_rs_IDEX))
 			o_controlFWMuxA <= 2'b10;
 		//si inst i-1 escribe en registro y rd de inst i-1 = rs de inst i	
 		else if (i_registerWrite_EXMEM == 1 & i_rd_EXMEM == i_rs_IDEX)
@@ -49,7 +49,7 @@ module FORWARDING_UNIT #(
 			o_controlFWMuxA <= 2'b00;
 
         //idem para registro rt, mux B
-		if(i_registerWrite_MEMWB == 1 & i_rd_MEMWB == i_rt_IDEX & (i_registerWrite_EXMEM == 0 | i_rd_EXMEM != i_rt_IDEX))
+		if((i_registerWrite_MEMWB == 1 & i_rd_MEMWB != 0) & i_rd_MEMWB == i_rt_IDEX & ((i_registerWrite_EXMEM == 0 & i_rd_EXMEM != 0) | i_rd_EXMEM != i_rt_IDEX))
 			o_controlFWMuxB <= 2'b10;
 		else if (i_registerWrite_EXMEM == 1 & i_rd_EXMEM == i_rt_IDEX)
 			o_controlFWMuxB <= 2'b01;

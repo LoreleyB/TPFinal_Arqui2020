@@ -101,7 +101,7 @@ module MIPS#(
 	     w_haltFlag_MEMWB; 
 
 	assign w_writeData_WBID = (w_signalControlWB_bus[0]) ? w_readData : w_addressMem_aluResult;
-	//si MemtoReg=1 entoces toma dato de memoria, sino toma resultado de Alu, ultimo mux
+	//si MemtoReg=1 toma dato de memoria, sino toma resultado de Alu, ultimo mux
 
 	assign o_registerARecolector = w_registerARecolector;
 	assign o_wireMem = w_wireMem;
@@ -279,7 +279,8 @@ module MIPS#(
 			.o_flagBranch(w_flagBranch), //confirma BEQ y BNEQ
 			.o_pcBranch(w_pcBranch_MEMIF),
 		    .o_signalControlWB(w_signalControlWB_bus),
-			.o_addressMem(w_addressMem_aluResult),//se usa como entrada al MUX de la etapa WB, es el resultado de la ALU. Ver de hacer la etapa WB
+			.o_addressMem(w_addressMem_aluResult),
+			//se usa como entrada al MUX de la etapa WB, es el resultado de la ALU. Ver de hacer la etapa WB
 			.o_writeReg(w_writeReg_MEMID),
 
 			.o_wireMem(w_wireMem), // para debug

@@ -61,7 +61,7 @@ module IMEMORY #(
 			w_control_SB,
 			w_branchNotEqual;
 
-	reg [len-1:0] 	r_dataIn;	
+	reg [len-1:0] 	r_dataIn;
 	wire [len-1:0]	w_dataOut;
 	wire [len-1:0]	w_dataOut_debug;
 
@@ -154,7 +154,7 @@ module IMEMORY #(
 
 		if (w_control_SH) // Store Half Word
 		begin
-			r_dataIn <= {{16{i_writeData[15]}},i_writeData[15:0]};				
+			r_dataIn <= {{16{i_writeData[15]}},i_writeData[15:0]};
 		end
 		else if (w_control_SB) //Store Byte
 		begin

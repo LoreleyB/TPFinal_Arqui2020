@@ -163,7 +163,8 @@ module IEXECUTE #(
 				o_pcBranch <= i_pcBranch + i_signExtend;
 				
 				o_alu <= w_aluOut;
-				o_dataRegB <= i_dataRegB;
+				//o_dataRegB <= i_dataRegB;
+				o_dataRegB <= w_muxB_alu_FW;
 				o_writeReg <= i_signalControlEX[9] ? (5'b 11111) : (i_signalControlEX[8] ? i_rd : i_rt);
 				//si es JALOnly => o_writeReg = 11111 sino, si RegDst = 1 ?> o_writeReg = i_rd, sino o_writeReg = i_rt
 				o_zeroFlag <= w_zeroFlag;
