@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="69280fs"></ZoomStartTime>
-      <ZoomEndTime time="139281fs"></ZoomEndTime>
-      <Cursor1Time time="1000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="26801fs"></ZoomEndTime>
+      <Cursor1Time time="155000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="227"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="30" />
    <wvobject fp_name="/TB_MIPS/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -27,10 +27,6 @@
    <wvobject fp_name="/TB_MIPS/flag" type="logic">
       <obj_property name="ElementShortName">flag</obj_property>
       <obj_property name="ObjectShortName">flag</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/o_alu" type="array">
       <obj_property name="ElementShortName">o_alu[31:0]</obj_property>
@@ -41,6 +37,10 @@
       <obj_property name="ElementShortName">o_writeReg[4:0]</obj_property>
       <obj_property name="ObjectShortName">o_writeReg[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix" type="array">
+      <obj_property name="ElementShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[4]" type="array">
       <obj_property name="ElementShortName">[4][31:0]</obj_property>
@@ -102,5 +102,56 @@
       <obj_property name="ElementShortName">o_dataMux[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_dataMux[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/o_PC" type="array">
+      <obj_property name="ElementShortName">o_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PC[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/o_instruction" type="array">
+      <obj_property name="ElementShortName">o_instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_instruction[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/ALU/o_zeroFlag" type="logic">
+      <obj_property name="ElementShortName">o_zeroFlag</obj_property>
+      <obj_property name="ObjectShortName">o_zeroFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_jump" type="array">
+      <obj_property name="ElementShortName">i_jump[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_jump[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_branch" type="array">
+      <obj_property name="ElementShortName">i_branch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_branch[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_register" type="array">
+      <obj_property name="ElementShortName">i_register[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_register[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_PC" type="array">
+      <obj_property name="ElementShortName">i_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_PC[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_select" type="array">
+      <obj_property name="ElementShortName">i_select[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_select[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/o_PC_MUX" type="array">
+      <obj_property name="ElementShortName">o_PC_MUX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PC_MUX[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_stallFlag" type="logic">
+      <obj_property name="ElementShortName">i_stallFlag</obj_property>
+      <obj_property name="ObjectShortName">i_stallFlag</obj_property>
    </wvobject>
 </wave_config>
