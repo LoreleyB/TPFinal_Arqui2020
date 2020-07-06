@@ -73,7 +73,7 @@ module INSTRUCTION_RAM #(
 		//else if (ctrl_clk_mips) begin
 		else if (enable)	begin
 				if(i_flush)
-				ram_data <= 0;
+				ram_data <= 0; //NOP
 				else
 				ram_data <= BRAM[i_addressI];
 			end

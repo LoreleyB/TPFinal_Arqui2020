@@ -20,7 +20,7 @@ C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IDECODE
 C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IEXECUTE.v,1593868824,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IFETCH.v,,IEXECUTE,,,,,,,,
 C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IFETCH.v,1593215089,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IMEMORY.v,,IFETCH,,,,,,,,
 C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IMEMORY.v,1593828459,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v,,IMEMORY,,,,,,,,
-C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v,1593642011,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MIPS.v,,INSTRUCTION_RAM,,,,,,,,
+C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v,1593992342,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MIPS.v,,INSTRUCTION_RAM,,,,,,,,
 C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MIPS.v,1593867129,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MUX_FORWARDING.v,,MIPS,,,,,,,,
 C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MUX_FORWARDING.v,1592522547,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC.v,,MUX_FORWARDING,,,,,,,,
 C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC.v,1593126615,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC_MUX.v,,PC,,,,,,,,

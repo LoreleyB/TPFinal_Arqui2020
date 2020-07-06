@@ -11904,3 +11904,171 @@ selectCodeEditor("tb_top.v", 180, 128); // ch (w, cr)
 // HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 7:59:48 PM ART
 // HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 8:29:48 PM ART
 // HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 8:59:48 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/1/20, 9:29:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 9:59:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 10:29:49 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 10:59:50 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/1/20, 11:29:50 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10801247 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/2/20, 2:43:06 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  28869749 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1220 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2910 ms. Increasing delay to 8730 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 10:44:22 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 11:14:19 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/2/20, 11:44:19 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 12:14:20 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 12:44:20 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 1:14:21 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/2/20, 1:44:21 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/2/20, 2:14:21 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/2/20, 2:44:22 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/2/20, 3:14:22 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/2/20, 3:44:23 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  12383 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/2/20, 4:14:35 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 4:44:24 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 5:14:24 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/2/20, 5:44:24 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 6:14:25 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 6:44:25 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 7:14:26 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/2/20, 7:44:26 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  438027 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/2/20, 8:14:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/2/20, 8:44:29 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/2/20, 9:14:29 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  36610 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  10800811 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/3/20, 12:40:26 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  31021549 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1724ms to process. Increasing delay to 8000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1725 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/3/20, 9:17:31 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/3/20, 9:47:30 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 10:17:31 AM ART
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2938 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2882 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3309 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3300 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2977 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2882 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2883 ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 3245 ms to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 10:47:38 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  7465 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/3/20, 11:17:33 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/3/20, 11:47:33 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 12:17:33 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 12:47:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/3/20, 1:17:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 1:47:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 2:17:35 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  7621 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 2:47:43 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 3:17:38 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 3:47:38 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10701 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 4:17:49 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10050 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 4:47:53 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 5:17:48 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  14489 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 5:48:03 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  2587 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  13602 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 6:18:07 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  11482 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 6:48:07 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 7:18:02 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 7:48:02 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 8:18:03 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 8:48:03 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  12608 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/3/20, 9:18:15 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/3/20, 9:48:04 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 10:18:05 PM ART
+// Elapsed time: 349460 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top (tb_top.v)]", 21); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v)]", 4); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v)]", 4); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v), u_memory : memory (memory.v)]", 8, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v), u_memory : memory (memory.v)]", 8, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v), u_memory : memory (memory.v)]", 8, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v), u_memory : memory (memory.v)]", 8, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("memory.v", 172, 232); // ch (w, cr)
+selectCodeEditor("memory.v", 172, 232, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("memory.v", 157, 246); // ch (w, cr)
+selectCodeEditor("memory.v", 157, 246, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("memory.v", 158, 297); // ch (w, cr)
+selectCodeEditor("memory.v", 158, 297, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("memory.v", 180, 250); // ch (w, cr)
+selectCodeEditor("memory.v", 180, 250, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("memory.v", 174, 133); // ch (w, cr)
+selectCodeEditor("memory.v", 174, 133, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("memory.v", 150, 264); // ch (w, cr)
+selectCodeEditor("memory.v", 150, 264, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("memory.v", 166, 212); // ch (w, cr)
+selectCodeEditor("memory.v", 166, 212); // ch (w, cr)
+selectCodeEditor("memory.v", 166, 212); // ch (w, cr)
+selectCodeEditor("memory.v", 166, 212); // ch (w, cr)
+selectCodeEditor("memory.v", 166, 212, false, false, false, false, true); // ch (w, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 10:48:05 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/3/20, 11:18:05 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10800399 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/4/20, 2:22:45 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  24217982 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1310 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/4/20, 9:06:34 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/4/20, 9:36:32 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/4/20, 10:06:32 AM ART
+// Elapsed time: 42605 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v), u_execute : execute (execute.v)]", 7, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_modular (top_modular.v), u_top_mips : top_mips (top_mips.v), u_execute : execute (execute.v)]", 7, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // P (aI, cr)
+selectCodeEditor("execute.v", 874, 280); // ch (w, cr)
+selectCodeEditor("execute.v", 874, 280, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("execute.v", 187, 296); // ch (w, cr)
+selectCodeEditor("execute.v", 187, 296, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("execute.v", 152, 280); // ch (w, cr)
+selectCodeEditor("execute.v", 152, 280, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("execute.v", 232, 279); // ch (w, cr)
+selectCodeEditor("execute.v", 232, 279, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("execute.v", 136, 283); // ch (w, cr)
+selectCodeEditor("execute.v", 136, 283, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("execute.v", 223, 280); // ch (w, cr)
+selectCodeEditor("execute.v", 223, 280, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("execute.v", 156, 136); // ch (w, cr)
+selectCodeEditor("execute.v", 156, 136, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("execute.v", 160, 128); // ch (w, cr)
+selectCodeEditor("execute.v", 160, 128, false, false, false, false, true); // ch (w, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/4/20, 10:36:32 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/4/20, 11:06:33 AM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/4/20, 11:36:33 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  800229 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/4/20, 12:06:34 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 92 MB. Current time: 7/4/20, 12:36:34 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10800467 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1040 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 94 MB. Current time: 7/4/20, 3:45:54 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  8936474 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2222 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 93 MB. Current time: 7/4/20, 6:14:56 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  4655 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 88 MB. Current time: 7/4/20, 6:44:58 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 7/4/20, 7:14:55 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 7/4/20, 7:44:55 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 7/4/20, 8:14:55 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 88 MB. Current time: 7/4/20, 8:44:55 PM ART
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 88 MB. Current time: 7/4/20, 9:14:56 PM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  10800547 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2042 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 88 MB. Current time: 7/5/20, 12:33:37 AM ART
+// WARNING: HEventQueue.dispatchEvent() is taking  34882994 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1391 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 913 MB. GUI used memory: 89 MB. Current time: 7/5/20, 10:15:06 AM ART
