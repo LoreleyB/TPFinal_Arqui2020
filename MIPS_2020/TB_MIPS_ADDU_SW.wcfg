@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="26801fs"></ZoomEndTime>
-      <Cursor1Time time="155000fs"></Cursor1Time>
+      <ZoomEndTime time="138001fs"></ZoomEndTime>
+      <Cursor1Time time="50000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="227"></NameColumnWidth>
-      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="30" />
+   <WVObjectSize size="32" />
    <wvobject fp_name="/TB_MIPS/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -41,6 +41,136 @@
    <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix" type="array">
       <obj_property name="ElementShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[31]" type="array">
+         <obj_property name="ElementShortName">[31][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[31][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[30]" type="array">
+         <obj_property name="ElementShortName">[30][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[30][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[29]" type="array">
+         <obj_property name="ElementShortName">[29][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[29][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[28]" type="array">
+         <obj_property name="ElementShortName">[28][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[28][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[27]" type="array">
+         <obj_property name="ElementShortName">[27][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[27][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[26]" type="array">
+         <obj_property name="ElementShortName">[26][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[26][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[25]" type="array">
+         <obj_property name="ElementShortName">[25][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[25][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[24]" type="array">
+         <obj_property name="ElementShortName">[24][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[24][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[23]" type="array">
+         <obj_property name="ElementShortName">[23][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[23][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[22]" type="array">
+         <obj_property name="ElementShortName">[22][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[22][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[21]" type="array">
+         <obj_property name="ElementShortName">[21][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[21][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[20]" type="array">
+         <obj_property name="ElementShortName">[20][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[20][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[19]" type="array">
+         <obj_property name="ElementShortName">[19][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[19][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[18]" type="array">
+         <obj_property name="ElementShortName">[18][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[18][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[17]" type="array">
+         <obj_property name="ElementShortName">[17][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[17][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[16]" type="array">
+         <obj_property name="ElementShortName">[16][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[16][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[15]" type="array">
+         <obj_property name="ElementShortName">[15][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[14]" type="array">
+         <obj_property name="ElementShortName">[14][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[13]" type="array">
+         <obj_property name="ElementShortName">[13][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[12]" type="array">
+         <obj_property name="ElementShortName">[12][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[11]" type="array">
+         <obj_property name="ElementShortName">[11][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[10]" type="array">
+         <obj_property name="ElementShortName">[10][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[9]" type="array">
+         <obj_property name="ElementShortName">[9][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[8]" type="array">
+         <obj_property name="ElementShortName">[8][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[7]" type="array">
+         <obj_property name="ElementShortName">[7][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[6]" type="array">
+         <obj_property name="ElementShortName">[6][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[5]" type="array">
+         <obj_property name="ElementShortName">[5][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[4]" type="array">
+         <obj_property name="ElementShortName">[4][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[3]" type="array">
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[2]" type="array">
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[1]" type="array">
+         <obj_property name="ElementShortName">[1][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[0]" type="array">
+         <obj_property name="ElementShortName">[0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[4]" type="array">
       <obj_property name="ElementShortName">[4][31:0]</obj_property>
@@ -153,5 +283,13 @@
    <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_stallFlag" type="logic">
       <obj_property name="ElementShortName">i_stallFlag</obj_property>
       <obj_property name="ObjectShortName">i_stallFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/w_flagBranch" type="logic">
+      <obj_property name="ElementShortName">w_flagBranch</obj_property>
+      <obj_property name="ObjectShortName">w_flagBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[1]" type="array">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -29,7 +29,7 @@ module IEXECUTE #(
 	parameter len_wb_bus = 2
 	)(
 	input clk,
-	//input ctrl_clk_mips,
+	
 	input reset,
 
 	input [len-1:0] i_pcBranch,
@@ -142,7 +142,7 @@ module IEXECUTE #(
 			o_haltFlag_EX <= 0;			
 		end
 
-		//else if (ctrl_clk_mips) begin
+		
 		else begin
 			o_haltFlag_EX <= i_haltFlag_EX;
 

@@ -26,7 +26,7 @@ module RW_REGISTERS#(
 	parameter NB = $clog2(lenght)//5 bits
 	)(
 	input clk,
-	//input ctrl_clk_mips,
+	
 	input reset,
 	input i_flagRegWrite,
 	input [NB-1:0] i_readRegister1,
@@ -58,7 +58,7 @@ module RW_REGISTERS#(
 			o_readData2 = 0;
 		end
 
-		//else if(ctrl_clk_mips) begin
+		
 		else begin
 			o_readData1 <= r_dataRegistersMatrix[i_readRegister1];
 			o_readData2 <= r_dataRegistersMatrix[i_readRegister2];
@@ -67,12 +67,12 @@ module RW_REGISTERS#(
 
 	always @(negedge clk)
 	begin
-		//if (ctrl_clk_mips) begin
+		
 			if (i_flagRegWrite) 
 			begin
 				r_dataRegistersMatrix[i_writeRegister] <= i_writeData;				
 			end
-		//end
+		
 	end
 
 endmodule

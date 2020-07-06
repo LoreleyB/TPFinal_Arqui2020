@@ -1,0 +1,6 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/synth/func/xsim/TB_MIPS_func_synth.v,1594054369,verilog,,C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v,,ALU;DATA_RAM;IDECODE;IEXECUTE;IFETCH;IMEMORY;INSTRUCTION_RAM;MIPS;PC;PC_SUM;RW_REGISTERS;glbl,,,,,,,,
+C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v,1593816790,verilog,,,,TB_MIPS,,,,,,,,

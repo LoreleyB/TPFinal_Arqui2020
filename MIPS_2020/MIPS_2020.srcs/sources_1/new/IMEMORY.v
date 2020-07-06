@@ -28,7 +28,7 @@ module IMEMORY #(
 	parameter len_wb_bus = 2
 	)(
 	input clk,
-	//input ctrl_clk_mips,
+	
 	input reset,
 	input [len-1:0] i_addressMem,
 	input [len-1:0] i_writeData,
@@ -46,8 +46,6 @@ module IMEMORY #(
     output reg [1:0] o_signalControlWB,
 	output reg [len-1:0] o_addressMem,
 	output reg [NB-1:0] o_writeReg,
-
-	output [len-1:0] o_wireMem,
 	output reg o_haltFlag_MEM
     );
 
@@ -63,7 +61,7 @@ module IMEMORY #(
 
 	reg [len-1:0] 	r_dataIn;
 	wire [len-1:0]	w_dataOut;
-	wire [len-1:0]	w_dataOut_debug;
+
 
 
 
@@ -82,22 +80,20 @@ module IMEMORY #(
 	assign o_flagBranch = w_branch && ((w_branchNotEqual) ? (~i_zeroFlag) : (i_zeroFlag));	
 	// la señal de Branch se activa con ambas intrucciones de branch, la otra señal te indica cual de las 2 fue
     // o_flagBranch es el bit menos significativo de i_pcSrc[2:0] de FETH
-	assign o_wireMem = w_dataOut_debug;
+
 
 	DATA_RAM #(
 		.RAM_WIDTH(32),
-		.RAM_DEPTH(2048),
-		.RAM_PERFORMANCE("LOW_LATENCY")
+		.RAM_DEPTH(2048)
 		)
 		DATA_RAM(
 			.i_addressD(i_addressMem),
 			.i_dataD(r_dataIn),
 			.clka(clk),
-			//.ctrl_clk_mips(ctrl_clk_mips),
+			
 			.i_writeEnable(w_memWrite),
 			.enable(w_memRead),
-			.o_dataD(w_dataOut),
-			.o_wire_dataD(w_dataOut_debug)
+			.o_dataD(w_dataOut)
 			);
 
 	always @(posedge clk, posedge reset) 
@@ -112,7 +108,7 @@ module IMEMORY #(
 			o_haltFlag_MEM <= 0;
 		end
 
-		//else if (ctrl_clk_mips) begin
+		
 		else begin
 			o_haltFlag_MEM <= i_haltFlag_MEM;
 

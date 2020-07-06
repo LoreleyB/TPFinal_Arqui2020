@@ -26,37 +26,19 @@ module MIPS#(
 	parameter NB = $clog2(LEN),
 	parameter len_exec_bus = 11,
 	parameter len_mem_bus = 9,
-	parameter len_wb_bus = 2,
-    parameter nb_Latches_1_2 = (LEN*2),
-    parameter nb_Latches_2_3 = (LEN*4),
-    parameter nb_Latches_3_4 = (LEN*4),
-    parameter nb_Latches_4_5 = (LEN*3)
+	parameter len_wb_bus = 2
 	)(
 	input clk,
 	input reset,
 
-	// para debug
 
-	input i_debugFlag,
-	input [LEN-1:0] i_addressDebug,
-	input [LEN-1:0] i_addressMemInst,
-	input [LEN-1:0] i_instructoMemo,
-	input i_writeEnable_inst,
-	//input ctrl_clk_mips,
-
-	output [LEN-1:0] o_registerARecolector,
-	output [LEN-1:0] o_wireMem,
 	output [LEN-1:0] o_PC,
-	output o_haltFlag,
-    output [(nb_Latches_1_2)-1:0] o_latches_IFID,
-    output [(nb_Latches_2_3)-1:0] o_latches_IDEX,
-    output [(nb_Latches_3_4)-1:0] o_latches_EXMEM,
-    output [(nb_Latches_4_5)-1:0] o_latches_MEMWB 
+	output o_haltFlag //instruccion final FFFF
+
 	);
 
     wire [LEN-1:0] w_pcBranch_IFID,
 				   w_pcBranch_IDEX,
-				   //w_pcBranch_EXIF,
 				   w_pcJump,
 				   w_pcJumpRegister,
 				   w_instruccion,
@@ -69,9 +51,7 @@ module MIPS#(
 				   w_addressMem_aluResult,
 				   w_writeData_EXMEM, 
 				   w_pcBranch_EXMEM,
-				   w_pcBranch_MEMIF, //No deberia salir de DECODE????? esta saliendo de MEM y va a IF
-				   w_registerARecolector,
-				   w_wireMem,
+				   w_pcBranch_MEMIF, 
 				   w_PC;
 
 	wire [NB-1:0] w_rt,
@@ -92,9 +72,9 @@ module MIPS#(
     
     wire w_flagJump,
          w_flagJumpRegister,
-	     connect_zero_flag,
+	     w_zeroFlag,
 	     w_flagBranch,
-	     w_flagStall, //bandera de control de riesgo, caso del load
+	     w_hazardFlag, //bandera de control de riesgo, caso del load
 	     w_haltFlag_IFID,
 	     w_haltFlag_IDEX,
 	     w_haltFlag_EXMEM,
@@ -103,69 +83,28 @@ module MIPS#(
 	assign w_writeData_WBID = (w_signalControlWB_bus[0]) ? w_readData : w_addressMem_aluResult;
 	//si MemtoReg=1 toma dato de memoria, sino toma resultado de Alu, ultimo mux
 
-	assign o_registerARecolector = w_registerARecolector;
-	assign o_wireMem = w_wireMem;
 	assign o_PC = w_PC;
 	assign o_haltFlag = w_haltFlag_MEMWB;
 
-	assign o_latches_IFID = {	// 2 registros
-		w_instruccion, // 32 bits
-		w_pcBranch_IFID // 32 bits
-	};
-	assign o_latches_IDEX = {	// 4 registros
-		{10{1'b 0}}, // 10 bits
-		w_signalControlEX, // 11 bits
-		w_signalControlME_IDEX, // 9 bits
-		w_signalControlWB_IDEX, // 2 bits
-		{12{1'b 0}}, // 12 bits
-		w_rd, // 5 bits
-		w_rs, // 5 bits
-		w_rt, // 5 bits
-		w_shamt, // 5 bits
-		w_signExtend, // 32 bits
-		w_pcBranch_IDEX // 32 bits
-	};
-	assign o_latches_EXMEM = {	// 4 registros
-		{15{1'b 0}}, // 15 bits
-		w_signalControlME_EXMEM, // 9 bits
-		w_signalControlWB_EXMEM, // 2 bits
-		w_writeReg_EXMEM, // 5 bits
-		connect_zero_flag, // 1 bit
-		w_aluResult, // 32 bits
-		w_pcBranch_EXMEM, // 32 bits
-		w_registerDataB // 32 bits
-	};
-	assign o_latches_MEMWB = {	// 3 registros
-		{24{1'b 0}}, // 24 bits
-		w_haltFlag_MEMWB, // 1 bit
-		w_writeReg_MEMID, // 5 bits
-		w_signalControlWB_bus, // 2 bits
-		w_addressMem_aluResult, // 32 bits
-		w_readData // 32 bits
-	};
 
 	IFETCH #(
 		.len(LEN)
 		)
 		IFETCH(
 			.clk(clk),
-			//.ctrl_clk_mips(ctrl_clk_mips),
+			
 			.reset(reset),
 			.i_pcSrc({w_flagJump, w_flagJumpRegister, w_flagBranch}), 
 			.i_pcJump(w_pcJump),
 			.i_pcBranch(w_pcBranch_MEMIF),
 			.i_pcRegister(w_pcJumpRegister),
-			.i_stallFlag(!w_flagStall),
+			.i_stallFlag(!w_hazardFlag),// Hazzard Detection, enable del modulo PC
 
-			.i_addressDebug(i_addressMemInst),
-			.i_debugFlag(i_debugFlag),
-			.i_instructoMemo(i_instructoMemo),
-			.i_writeEnable_inst(i_writeEnable_inst),
 
 			.o_pcBranch(w_pcBranch_IFID),
 			.o_instruction(w_instruccion),
-			.o_PC(w_PC), // para debug
-			.o_haltFlag_IF(w_haltFlag_IFID) // para debug
+			.o_PC(w_PC), 
+			.o_haltFlag_IF(w_haltFlag_IFID)
 		);
 
 	IDECODE #(
@@ -173,10 +112,10 @@ module MIPS#(
 		)
 		IDECODE(
 			.clk(clk),
-			//.ctrl_clk_mips(ctrl_clk_mips),
+			
 			.reset(reset),
 			.i_pcBranch(w_pcBranch_IFID),
-			.i_instruction(i_debugFlag ? {{6{1'b0}}, i_addressDebug[4:0], {21{1'b0}}} : w_instruccion),//ANALIZAR i_debugFlag y i_addressDebug
+			.i_instruction(w_instruccion),
 			.i_flagRegWrite(w_signalControlWB_bus[1]),
 			.i_writeData(w_writeData_WBID),
 			.i_writeRegister(w_writeReg_MEMID),
@@ -194,7 +133,7 @@ module MIPS#(
 			.o_rs(w_rs),
 			.o_shamt(w_shamt),
 
-			.o_registerARecolector(w_registerARecolector),
+			
             .o_haltFlag_ID(w_haltFlag_IDEX),
             
 
@@ -204,7 +143,7 @@ module MIPS#(
             .o_signalControlME(w_signalControlME_IDEX),
 			.o_signalControlWB(w_signalControlWB_IDEX),
 
-			.o_stallFlag(w_flagStall)
+			.o_hazardFlag(w_hazardFlag)
 
 			
 			
@@ -215,7 +154,7 @@ module MIPS#(
 		)
 		IEXECUTE(
 			.clk(clk),
-			//.ctrl_clk_mips(ctrl_clk_mips),
+			
 			.reset(reset),
 		
 			.i_pcBranch(w_pcBranch_IDEX),
@@ -245,7 +184,7 @@ module MIPS#(
 			
 			.o_pcBranch(w_pcBranch_EXMEM),
 			.o_alu(w_aluResult),
-			.o_zeroFlag(connect_zero_flag),
+			.o_zeroFlag(w_zeroFlag),
 			.o_dataRegB(w_writeData_EXMEM),
 			.o_writeReg(w_writeReg_EXMEM),
 		
@@ -261,15 +200,15 @@ module MIPS#(
 		)
 		IMEMORY(
 			.clk(clk),
-			//.ctrl_clk_mips(ctrl_clk_mips),
+			
 			.reset(reset),
-			.i_addressMem(i_debugFlag ? i_addressDebug : w_aluResult),
+			.i_addressMem(w_aluResult),
 			.i_writeData(w_writeData_EXMEM),
 			
 			.i_signalControlME(w_signalControlME_EXMEM),
 		    .i_signalControlWB(w_signalControlWB_EXMEM),
 			.i_writeReg(w_writeReg_EXMEM),			
-			.i_zeroFlag(connect_zero_flag),
+			.i_zeroFlag(w_zeroFlag),
 			.i_pcBranch(w_pcBranch_EXMEM),
 
 			.i_haltFlag_MEM(w_haltFlag_EXMEM),
@@ -282,10 +221,9 @@ module MIPS#(
 			.o_addressMem(w_addressMem_aluResult),
 			//se usa como entrada al MUX de la etapa WB, es el resultado de la ALU. Ver de hacer la etapa WB
 			.o_writeReg(w_writeReg_MEMID),
-
-			.o_wireMem(w_wireMem), // para debug
-			
 			.o_haltFlag_MEM(w_haltFlag_MEMWB)
 			);
+
+
 
 endmodule

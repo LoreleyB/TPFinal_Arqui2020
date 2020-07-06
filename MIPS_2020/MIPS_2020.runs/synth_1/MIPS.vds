@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jul  5 19:39:58 2020
-# Process ID: 8640
+# Start of session at: Mon Jul  6 15:39:15 2020
+# Process ID: 17768
 # Current directory: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1
 # Command line: vivado.exe -log MIPS.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MIPS.tcl
 # Log file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1/MIPS.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12600 
+INFO: Helper process launched with PID 7268 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 687.250 ; gain = 238.605
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 688.129 ; gain = 237.965
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'MIPS' [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MIPS.v:24]
 	Parameter LEN bound to: 32 - type: integer 
@@ -25,10 +25,6 @@ INFO: [Synth 8-6157] synthesizing module 'MIPS' [C:/Arquitectura/TPFinal_Arqui20
 	Parameter len_exec_bus bound to: 11 - type: integer 
 	Parameter len_mem_bus bound to: 9 - type: integer 
 	Parameter len_wb_bus bound to: 2 - type: integer 
-	Parameter nb_Latches_1_2 bound to: 64 - type: integer 
-	Parameter nb_Latches_2_3 bound to: 128 - type: integer 
-	Parameter nb_Latches_3_4 bound to: 128 - type: integer 
-	Parameter nb_Latches_4_5 bound to: 96 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'IFETCH' [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IFETCH.v:23]
 	Parameter len bound to: 32 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'PC_MUX' [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC_MUX.v:23]
@@ -40,9 +36,8 @@ INFO: [Synth 8-6155] done synthesizing module 'PC' (2#1) [C:/Arquitectura/TPFina
 INFO: [Synth 8-6157] synthesizing module 'INSTRUCTION_RAM' [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v:23]
 	Parameter RAM_WIDTH bound to: 32 - type: integer 
 	Parameter RAM_DEPTH bound to: 2048 - type: integer 
-	Parameter RAM_PERFORMANCE bound to: LOW_LATENCY - type: string 
 	Parameter INIT_FILE bound to: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex - type: string 
-INFO: [Synth 8-3876] $readmem data file 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex' is read successfully [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v:55]
+INFO: [Synth 8-3876] $readmem data file 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex' is read successfully [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v:50]
 INFO: [Synth 8-6155] done synthesizing module 'INSTRUCTION_RAM' (3#1) [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v:23]
 INFO: [Synth 8-6157] synthesizing module 'PC_SUM' [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC_SUM.v:23]
 	Parameter LEN bound to: 32 - type: integer 
@@ -98,72 +93,10 @@ INFO: [Synth 8-6157] synthesizing module 'IMEMORY' [C:/Arquitectura/TPFinal_Arqu
 INFO: [Synth 8-6157] synthesizing module 'DATA_RAM' [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/DATA_RAM.v:24]
 	Parameter RAM_WIDTH bound to: 32 - type: integer 
 	Parameter RAM_DEPTH bound to: 2048 - type: integer 
-	Parameter RAM_PERFORMANCE bound to: LOW_LATENCY - type: string 
 	Parameter INIT_FILE bound to: (null) - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'DATA_RAM' (15#1) [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/DATA_RAM.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'IMEMORY' (16#1) [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IMEMORY.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'MIPS' (17#1) [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MIPS.v:24]
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[127] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[126] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[125] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[124] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[123] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[122] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[121] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[120] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[119] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[118] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[95] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[94] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[93] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[92] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[91] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[90] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[89] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[88] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[87] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[86] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[85] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[84] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[127] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[126] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[125] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[124] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[123] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[122] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[121] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[120] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[119] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[118] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[117] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[116] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[115] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[114] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[113] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[95] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[94] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[93] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[92] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[91] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[90] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[89] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[88] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[87] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[86] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[85] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[84] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[83] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[82] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[81] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[80] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[79] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[78] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[77] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[76] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[75] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[74] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[73] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[72] driven by constant 0
 WARNING: [Synth 8-3331] design DATA_RAM has unconnected port i_addressD[31]
 WARNING: [Synth 8-3331] design DATA_RAM has unconnected port i_addressD[30]
 WARNING: [Synth 8-3331] design DATA_RAM has unconnected port i_addressD[29]
@@ -187,80 +120,27 @@ WARNING: [Synth 8-3331] design DATA_RAM has unconnected port i_addressD[12]
 WARNING: [Synth 8-3331] design DATA_RAM has unconnected port i_addressD[11]
 WARNING: [Synth 8-3331] design IEXECUTE has unconnected port i_signalControlEX[5]
 WARNING: [Synth 8-3331] design IEXECUTE has unconnected port i_signalControlEX[4]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[31]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[30]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[29]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[28]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[27]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[26]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[25]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[24]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[23]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[22]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[21]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[20]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[19]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[18]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[17]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[16]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[15]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[14]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[13]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[12]
-WARNING: [Synth 8-3331] design INSTRUCTION_RAM has unconnected port i_addressI[11]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[31]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[30]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[29]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[28]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[27]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[26]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[25]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[24]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[23]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[22]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[21]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[20]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[19]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[18]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[17]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[16]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[15]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[14]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[13]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[12]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[11]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[10]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[9]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[8]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[7]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[6]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[5]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[4]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[3]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[2]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[1]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[0]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_debugFlag
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 760.055 ; gain = 311.410
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 760.496 ; gain = 310.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 760.055 ; gain = 311.410
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 760.496 ; gain = 310.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 760.496 ; gain = 310.332
 INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 760.055 ; gain = 311.410
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "r_matrixIRAM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5587] ROM size for "o_aluCode" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "o_signalControlEX" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "r_aluOp" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "o_signalControlME" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 760.055 ; gain = 311.410
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 761.602 ; gain = 311.438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,11 +166,12 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 5     
 +---RAMs : 
-	              64K Bit         RAMs := 2     
+	              64K Bit         RAMs := 1     
 	             1024 Bit         RAMs := 1     
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 28    
+	  16 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 26    
 	   2 Input     11 Bit        Muxes := 1     
 	  20 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 2     
@@ -316,7 +197,7 @@ Hierarchical RTL Component report
 Module MIPS 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 1     
 Module PC_MUX 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -329,9 +210,8 @@ Module INSTRUCTION_RAM
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
-+---RAMs : 
-	              64K Bit         RAMs := 1     
 +---Muxes : 
+	  16 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
 Module PC_SUM 
 Detailed RTL Component Info : 
@@ -446,70 +326,7 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "CONTROL_SIGNALS/o_signalControlME" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "CONTROL_SIGNALS/r_aluOp" is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[127] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[126] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[125] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[124] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[123] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[122] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[121] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[120] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[119] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[118] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[95] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[94] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[93] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[92] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[91] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[90] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[89] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[88] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[87] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[86] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[85] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_IDEX[84] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[127] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[126] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[125] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[124] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[123] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[122] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[121] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[120] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[119] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[118] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[117] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[116] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[115] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[114] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_EXMEM[113] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[95] driven by constant 0
-WARNING: [Synth 8-3917] design MIPS has port o_latches_MEMWB[94] driven by constant 0
-INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[31]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[30]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[29]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[28]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[27]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[26]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[25]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[24]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[23]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[22]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[21]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[20]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[19]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[18]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[17]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[16]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[15]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[14]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[13]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[12]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[11]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[10]
-WARNING: [Synth 8-3331] design IFETCH has unconnected port i_addressDebug[9]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4652] Swapped enable and write-enable on 2 RAM instances of RAM IMEMORY/DATA_RAM/r_matrixDRAM_reg to conserve power
 INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[15]' (FDC) to 'IDECODE/o_signExtend_reg[16]'
 INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[16]' (FDC) to 'IDECODE/o_signExtend_reg[17]'
 INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[17]' (FDC) to 'IDECODE/o_signExtend_reg[18]'
@@ -526,22 +343,72 @@ INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[27]' (FDC) to 'I
 INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[28]' (FDC) to 'IDECODE/o_signExtend_reg[29]'
 INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[29]' (FDC) to 'IDECODE/o_signExtend_reg[30]'
 INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[30]' (FDC) to 'IDECODE/o_signExtend_reg[31]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signalControlWB_reg[0]' (FDC) to 'IDECODE/o_signalControlME_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[6]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[7]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[8]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[9]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[10]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[11]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[23]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[12]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[13]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[14]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[15]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[5]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[23]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[4]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[26]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[17]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[27]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[31]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[30]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[25]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[31]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[29]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[29]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[19]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[24]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[25]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[25]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[22]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[22]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[20]'
+INFO: [Synth 8-3886] merging instance 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[16]' (FDCE) to 'IFETCH/INSTRUCTION_RAM/r_instructionRAM_reg[17]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_shamt_reg[2]' (FDC) to 'IDECODE/o_shamt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_shamt_reg[1]' (FDC) to 'IDECODE/o_shamt_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_shamt_reg[0]' (FDC) to 'IDECODE/o_shamt_reg[3]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rd_reg[3]' (FDC) to 'IDECODE/o_rd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rd_reg[4]' (FDC) to 'IDECODE/o_rd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rd_reg[1]' (FDC) to 'IDECODE/o_rd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_shamt_reg[3]' (FDC) to 'IDECODE/o_shamt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[4]' (FDC) to 'IDECODE/o_signExtend_reg[6]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[5]' (FDC) to 'IDECODE/o_signExtend_reg[11]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[6]' (FDC) to 'IDECODE/o_signExtend_reg[7]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[7]' (FDC) to 'IDECODE/o_signExtend_reg[8]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[8]' (FDC) to 'IDECODE/o_signExtend_reg[9]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[9]' (FDC) to 'IDECODE/o_signExtend_reg[10]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[10]' (FDC) to 'IDECODE/o_signExtend_reg[12]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[12]' (FDC) to 'IDECODE/o_signExtend_reg[13]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[13]' (FDC) to 'IDECODE/o_signExtend_reg[14]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[14]' (FDC) to 'IDECODE/o_signExtend_reg[31]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rs_reg[3]' (FDC) to 'IDECODE/o_rs_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rs_reg[4]' (FDC) to 'IDECODE/o_rs_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rt_reg[0]' (FDC) to 'IDECODE/o_rt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rd_reg[2]' (FDC) to 'IDECODE/o_shamt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[11]' (FDC) to 'IDECODE/o_rs_reg[2]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[31]' (FDC) to 'IDECODE/o_rs_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rs_reg[1]' (FDC) to 'IDECODE/o_rt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signalControlME_reg[7]' (FDC) to 'IDECODE/o_signalControlWB_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signalControlME_reg[0]' (FDC) to 'IDECODE/o_signalControlEX_reg[6]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signalControlME_reg[5]' (FDC) to 'IDECODE/o_signalControlWB_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signalControlWB_reg[0]' (FDC) to 'IDECODE/o_signalControlEX_reg[9]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signalControlWB_reg[1]' (FDC) to 'IDECODE/o_signalControlEX_reg[8]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_signalControlEX_reg[9]' (FDC) to 'IDECODE/o_signalControlME_reg[1]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_shamt_reg[4]' (FDC) to 'IDECODE/o_rt_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\IDECODE/o_signalControlME_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping	Report (see note below)
-+------------+------------------------------------------------+-----------+----------------------+------------------+
-|Module Name | RTL Object                                     | Inference | Size (Depth x Width) | Primitives       | 
-+------------+------------------------------------------------+-----------+----------------------+------------------+
-|MIPS        | IFETCH/INSTRUCTION_RAM/BRAM_reg                | Implied   | 2 K x 32             | RAM256X1S x 256	 | 
-|MIPS        | IDECODE/RW_REGISTERS/r_dataRegistersMatrix_reg | Implied   | 32 x 32              | RAM32M x 12	     | 
-|MIPS        | IMEMORY/DATA_RAM/BRAM_reg                      | Implied   | 2 K x 32             | RAM256X1S x 256	 | 
-+------------+------------------------------------------------+-----------+----------------------+------------------+
++------------+------------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                     | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------------------------------------+-----------+----------------------+--------------+
+|MIPS        | IDECODE/RW_REGISTERS/r_dataRegistersMatrix_reg | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------+------------------------------------------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -558,20 +425,18 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping	Report
-+------------+------------------------------------------------+-----------+----------------------+------------------+
-|Module Name | RTL Object                                     | Inference | Size (Depth x Width) | Primitives       | 
-+------------+------------------------------------------------+-----------+----------------------+------------------+
-|MIPS        | IFETCH/INSTRUCTION_RAM/BRAM_reg                | Implied   | 2 K x 32             | RAM256X1S x 256	 | 
-|MIPS        | IDECODE/RW_REGISTERS/r_dataRegistersMatrix_reg | Implied   | 32 x 32              | RAM32M x 12	     | 
-|MIPS        | IMEMORY/DATA_RAM/BRAM_reg                      | Implied   | 2 K x 32             | RAM256X1S x 256	 | 
-+------------+------------------------------------------------+-----------+----------------------+------------------+
++------------+------------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                     | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------------------------------------+-----------+----------------------+--------------+
+|MIPS        | IDECODE/RW_REGISTERS/r_dataRegistersMatrix_reg | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------+------------------------------------------------+-----------+----------------------+--------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -585,19 +450,9 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'IEXECUTE/o_signalControlWB_reg[0]' (FDC) to 'IEXECUTE/o_signalControlME_reg[1]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[6]' (FDC) to 'IDECODE/o_shamt_reg[0]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[7]' (FDC) to 'IDECODE/o_shamt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[8]' (FDC) to 'IDECODE/o_shamt_reg[2]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[9]' (FDC) to 'IDECODE/o_shamt_reg[3]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[10]' (FDC) to 'IDECODE/o_shamt_reg[4]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[11]' (FDC) to 'IDECODE/o_rd_reg[0]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[12]' (FDC) to 'IDECODE/o_rd_reg[1]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[13]' (FDC) to 'IDECODE/o_rd_reg[2]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[14]' (FDC) to 'IDECODE/o_rd_reg[3]'
-INFO: [Synth 8-3886] merging instance 'IDECODE/o_signExtend_reg[31]' (FDC) to 'IDECODE/o_rd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'IDECODE/o_rd_reg[0]' (FDC) to 'IDECODE/o_rs_reg[2]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -621,13 +476,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -646,25 +501,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -677,68 +532,63 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+----------+------+
-|      |Cell      |Count |
-+------+----------+------+
-|1     |BUFG      |     2|
-|2     |CARRY4    |    39|
-|3     |LUT1      |    10|
-|4     |LUT2      |   301|
-|5     |LUT3      |   280|
-|6     |LUT4      |   176|
-|7     |LUT5      |   169|
-|8     |LUT6      |   710|
-|9     |MUXF7     |    38|
-|10    |RAM256X1S |   512|
-|11    |RAM32M    |    12|
-|12    |FDCE      |   407|
-|13    |FDRE      |    96|
-|14    |IBUF      |    68|
-|15    |OBUF      |   513|
-+------+----------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    39|
+|3     |LUT1   |     5|
+|4     |LUT2   |   224|
+|5     |LUT3   |   112|
+|6     |LUT4   |   148|
+|7     |LUT5   |   138|
+|8     |LUT6   |   427|
+|9     |RAM32M |    12|
+|10    |FDCE   |   242|
+|11    |FDRE   |    64|
+|12    |IBUF   |     2|
+|13    |OBUF   |    33|
++------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+----------------+------+
 |      |Instance            |Module          |Cells |
 +------+--------------------+----------------+------+
-|1     |top                 |                |  3333|
-|2     |  IDECODE           |IDECODE         |  1051|
-|3     |    RW_REGISTERS    |RW_REGISTERS    |   139|
-|4     |  IEXECUTE          |IEXECUTE        |   345|
-|5     |    ALU             |ALU             |    96|
-|6     |  IFETCH            |IFETCH          |   796|
-|7     |    INSTRUCTION_RAM |INSTRUCTION_RAM |   606|
-|8     |    PC              |PC              |    89|
-|9     |    PC_SUM          |PC_SUM          |    36|
-|10    |  IMEMORY           |IMEMORY         |   557|
-|11    |    DATA_RAM        |DATA_RAM        |   384|
+|1     |top                 |                |  1447|
+|2     |  IDECODE           |IDECODE         |   931|
+|3     |    RW_REGISTERS    |RW_REGISTERS    |    89|
+|4     |  IEXECUTE          |IEXECUTE        |   202|
+|5     |    ALU             |ALU             |   107|
+|6     |  IFETCH            |IFETCH          |   234|
+|7     |    INSTRUCTION_RAM |INSTRUCTION_RAM |    39|
+|8     |    PC              |PC              |    81|
+|9     |    PC_SUM          |PC_SUM          |    49|
+|10    |  IMEMORY           |IMEMORY         |    43|
 +------+--------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1062.047 ; gain = 611.883
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 232 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1027.270 ; gain = 578.625
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1027.270 ; gain = 578.625
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1062.047 ; gain = 611.883
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1062.047 ; gain = 611.883
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1027.270 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 601 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1062.047 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 268 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1044.977 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 12 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1062.047 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 524 instances were transformed.
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 256 instances
-  RAM256X1S => RAM256X1S (inverted pins: WCLK) (MUXF7(x2), MUXF8, RAMS64E(x4)): 256 instances
+  A total of 12 instances were transformed.
   RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-81 Infos, 200 Warnings, 0 Critical Warnings and 0 Errors encountered.
+123 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1044.977 ; gain = 621.156
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1044.977 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1062.047 ; gain = 636.707
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1062.047 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1/MIPS.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MIPS_utilization_synth.rpt -pb MIPS_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jul  5 19:40:54 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  6 15:40:01 2020...

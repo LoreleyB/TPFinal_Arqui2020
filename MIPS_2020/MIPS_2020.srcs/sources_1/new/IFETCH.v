@@ -24,23 +24,18 @@ module IFETCH #(
 	parameter len = 32
 	) (
 	input clk,
-	//input ctrl_clk_mips,
+	
 	input reset,
 	input [2:0] i_pcSrc,
 	input [len-1:0] i_pcJump,
 	input [len-1:0] i_pcBranch,
 	input [len-1:0] i_pcRegister,
-	input i_stallFlag,
-
-	input [len-1:0] i_addressDebug,
-	input i_debugFlag,
-	input [len-1:0] i_instructoMemo,
-	input i_writeEnable_inst,
+	input i_stallFlag, //cargar PC y lectura de isntruccion
 
 	output reg [len-1:0] o_pcBranch,
 	output [len-1:0] o_instruction,
 	output [len-1:0] o_PC,
-	output reg o_haltFlag_IF // para debug
+	output reg o_haltFlag_IF
     );
 
     wire [len-1:0] w_pcSumadorMux; 
@@ -80,20 +75,17 @@ module IFETCH #(
 	INSTRUCTION_RAM #(
 		.RAM_WIDTH(len),
 		.RAM_DEPTH(2048),
-		 .INIT_FILE("C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex"),
-		.RAM_PERFORMANCE("LOW_LATENCY")
+		 .INIT_FILE("C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex")
+		//.RAM_PERFORMANCE("LOW_LATENCY")
 		)
 		INSTRUCTION_RAM(
-			//.i_addressI(i_debugFlag ? i_addressDebug : w_pctoSumadorMem),
 			.i_addressI(w_pctoSumadorMem),
 			.clka(clk),
 			.reset(reset),
 			.enable(i_stallFlag),
-			.i_writeEnable(i_writeEnable_inst),
 			.o_validI(w_validI),
 			.i_flush(w_flush),
-			.o_dataI(w_instruction),
-			.i_dataI(i_instructoMemo)
+			.o_dataI(w_instruction)
 			); 
 
 	PC_SUM #(
@@ -112,13 +104,13 @@ module IFETCH #(
 			o_haltFlag_IF <= 0;			
 		end
 
-        //else if (ctrl_clk_mips) begin
+        
         else begin
             o_haltFlag_IF <= w_validI;
     
             if (i_stallFlag | w_flush) 
             begin
-                o_pcBranch <= (w_flush) ? {len{1'b 0}} : w_pcSumadorMux;//si es una salto, mando burbuja (nop), sino mando pc + 1
+                o_pcBranch <= (w_flush) ? {len{1'b 0}} : w_pcSumadorMux;//si es una salto, mando 0, sino mando pc + 1
             end
         end
     end

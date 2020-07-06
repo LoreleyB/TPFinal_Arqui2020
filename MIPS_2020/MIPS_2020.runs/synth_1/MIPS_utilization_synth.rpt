@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sun Jul  5 19:40:54 2020
+| Date         : Mon Jul  6 15:40:01 2020
 | Host         : PROGVENTAS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MIPS_utilization_synth.rpt -pb MIPS_utilization_synth.pb
 | Design       : MIPS
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 3489 |     0 |     20800 | 16.77 |
-|   LUT as Logic             | 1393 |     0 |     20800 |  6.70 |
-|   LUT as Memory            | 2096 |     0 |      9600 | 21.83 |
-|     LUT as Distributed RAM | 2096 |     0 |           |       |
+| Slice LUTs*                |  899 |     0 |     20800 |  4.32 |
+|   LUT as Logic             |  851 |     0 |     20800 |  4.09 |
+|   LUT as Memory            |   48 |     0 |      9600 |  0.50 |
+|     LUT as Distributed RAM |   48 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  503 |     0 |     41600 |  1.21 |
-|   Register as Flip Flop    |  503 |     0 |     41600 |  1.21 |
+| Slice Registers            |  306 |     0 |     41600 |  0.74 |
+|   Register as Flip Flop    |  306 |     0 |     41600 |  0.74 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                   | 1062 |     0 |     16300 |  6.52 |
-| F8 Muxes                   |  512 |     0 |      8150 |  6.28 |
+| F7 Muxes                   |    0 |     0 |     16300 |  0.00 |
+| F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 407   |          Yes |           - |        Reset |
+| 242   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 96    |          Yes |       Reset |            - |
+| 64    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -89,26 +89,26 @@ Table of Contents
 4. IO and GT Specific
 ---------------------
 
-+-----------------------------+------+-------+-----------+--------+
-|          Site Type          | Used | Fixed | Available |  Util% |
-+-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |  581 |     0 |       106 | 548.11 |
-| Bonded IPADs                |    0 |     0 |        10 |   0.00 |
-| Bonded OPADs                |    0 |     0 |         4 |   0.00 |
-| PHY_CONTROL                 |    0 |     0 |         5 |   0.00 |
-| PHASER_REF                  |    0 |     0 |         5 |   0.00 |
-| OUT_FIFO                    |    0 |     0 |        20 |   0.00 |
-| IN_FIFO                     |    0 |     0 |        20 |   0.00 |
-| IDELAYCTRL                  |    0 |     0 |         5 |   0.00 |
-| IBUFDS                      |    0 |     0 |       104 |   0.00 |
-| GTPE2_CHANNEL               |    0 |     0 |         2 |   0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |   0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |   0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       250 |   0.00 |
-| IBUFDS_GTE2                 |    0 |     0 |         2 |   0.00 |
-| ILOGIC                      |    0 |     0 |       106 |   0.00 |
-| OLOGIC                      |    0 |     0 |       106 |   0.00 |
-+-----------------------------+------+-------+-----------+--------+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |   35 |     0 |       106 | 33.02 |
+| Bonded IPADs                |    0 |     0 |        10 |  0.00 |
+| Bonded OPADs                |    0 |     0 |         4 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
+| PHASER_REF                  |    0 |     0 |         5 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        20 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        20 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |         5 |  0.00 |
+| IBUFDS                      |    0 |     0 |       104 |  0.00 |
+| GTPE2_CHANNEL               |    0 |     0 |         2 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       250 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |         2 |  0.00 |
+| ILOGIC                      |    0 |     0 |       106 |  0.00 |
+| OLOGIC                      |    0 |     0 |       106 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
 
 
 5. Clocking
@@ -117,7 +117,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
@@ -151,23 +151,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| RAMS64E  | 2048 |  Distributed Memory |
-| MUXF7    | 1062 |               MuxFx |
-| LUT6     |  710 |                 LUT |
-| OBUF     |  513 |                  IO |
-| MUXF8    |  512 |               MuxFx |
-| FDCE     |  407 |        Flop & Latch |
-| LUT2     |  301 |                 LUT |
-| LUT3     |  280 |                 LUT |
-| LUT4     |  176 |                 LUT |
-| LUT5     |  169 |                 LUT |
-| FDRE     |   96 |        Flop & Latch |
+| LUT6     |  427 |                 LUT |
+| FDCE     |  242 |        Flop & Latch |
+| LUT2     |  224 |                 LUT |
+| LUT4     |  148 |                 LUT |
+| LUT5     |  138 |                 LUT |
+| LUT3     |  112 |                 LUT |
 | RAMD32   |   72 |  Distributed Memory |
-| IBUF     |   68 |                  IO |
+| FDRE     |   64 |        Flop & Latch |
 | CARRY4   |   39 |          CarryLogic |
+| OBUF     |   33 |                  IO |
 | RAMS32   |   24 |  Distributed Memory |
-| LUT1     |    9 |                 LUT |
-| BUFG     |    2 |               Clock |
+| LUT1     |    4 |                 LUT |
+| IBUF     |    2 |                  IO |
+| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 

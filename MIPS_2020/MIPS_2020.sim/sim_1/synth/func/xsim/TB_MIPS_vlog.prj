@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"TB_MIPS_func_synth.v" \
+"../../../../../MIPS_2020.srcs/sim_1/new/TB_MIPS.v" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,15 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/synth/func/xsim/TB_MIPS_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module DATA_RAM
+INFO: [VRFC 10-311] analyzing module IDECODE
+INFO: [VRFC 10-311] analyzing module IEXECUTE
+INFO: [VRFC 10-311] analyzing module IFETCH
+INFO: [VRFC 10-311] analyzing module IMEMORY
+INFO: [VRFC 10-311] analyzing module INSTRUCTION_RAM
+INFO: [VRFC 10-311] analyzing module MIPS
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-311] analyzing module PC_SUM
+INFO: [VRFC 10-311] analyzing module RW_REGISTERS
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_MIPS

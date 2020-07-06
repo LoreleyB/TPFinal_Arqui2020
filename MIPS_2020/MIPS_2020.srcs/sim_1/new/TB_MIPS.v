@@ -28,15 +28,15 @@ module TB_MIPS(
 	reg clk;
 	reg reset;
     
-	reg flag = 0;
+	
 
     MIPS#(
     	.LEN(32)
  		)
         MIPS(
         	.clk(clk),
-        	.reset(reset),
-        	.i_debugFlag(flag)
+        	.reset(reset)
+       	
         );
 
 	initial

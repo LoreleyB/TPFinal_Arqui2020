@@ -28,7 +28,7 @@ module PC#(
     input clk,
     input reset,
     input enable,
-    //input ctrl_clk_mips,
+   
 
     output reg [len-1:0] o_PC = 0
     );
@@ -38,8 +38,8 @@ module PC#(
         if(reset) begin
             o_PC = {len{1'b 0}}; 
         end
-		else if (enable) begin//if (ctrl_clk_mips) begin
-            //if (enable) begin
+		else if (enable) begin
+            
                 o_PC = i_PC;
             end
 

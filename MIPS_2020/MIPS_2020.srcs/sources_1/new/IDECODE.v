@@ -29,7 +29,7 @@ module IDECODE #(
 	parameter len_wb_bus = 2
 	)(
 	input clk,
-	//input ctrl_clk_mips,
+	
 	input reset,
 	input [len-1:0] i_pcBranch,
 	input [len-1:0] i_instruction,
@@ -50,7 +50,7 @@ module IDECODE #(
 	output reg [NB-1:0] o_rs,
 	output reg [NB-1:0] o_shamt,
 
-	output [len-1:0] o_registerARecolector,	// para recolector en modo debug
+	
 	output reg o_haltFlag_ID,
 
 	// señales de control
@@ -61,7 +61,7 @@ module IDECODE #(
 	output reg [len_wb_bus-1:0] o_signalControlWB,
 
 	//señal de control de riesgos
-	output o_stallFlag
+	output o_hazardFlag
     );
 
 	wire [len_exec_bus-1:0] w_signalControlEX;
@@ -72,8 +72,9 @@ module IDECODE #(
 					w_registerData1,
 					w_registerData2;
 
-    wire w_muxControl; //recibe valor del hazzard detection
-    wire [(len_exec_bus+len_wb_bus+len_mem_bus)-1:0] w_outMuxControl = w_muxControl ? 0 : {w_signalControlEX, w_signalControlME, w_signalControlWB};
+    wire w_hazardFlag; //recibe valor del hazard detection
+    wire [(len_exec_bus+len_wb_bus+len_mem_bus)-1:0] w_outMuxControl = w_hazardFlag ? 0 : {w_signalControlEX, w_signalControlME, w_signalControlWB};
+    //pone a cero todas las se�ales de control
 
 	assign o_flagJump = (i_flush) ? (0) : (w_signalControlEX[5]);
 	assign o_flagJumpRegister = (i_flush) ? (0) : (w_signalControlEX[4]);
@@ -81,12 +82,10 @@ module IDECODE #(
 	assign o_pcJump = (i_flush) ? (0) : ({i_pcBranch[31:28], {2'b 00, (i_instruction[25:0])}});
 	assign o_pcJumpRegister = (i_flush) ? (0) : (w_outRegisterData1);
 
-	assign o_registerARecolector = w_outRegisterData1; // para recolector en modo debug
-	
     assign o_registerDataA = (i_flush) ? (0) : (w_registerData1); 
     assign o_registerDataB = (i_flush) ? (0) : (w_registerData2);
 
-    assign o_stallFlag = (i_flush) ? (0) : (w_muxControl);
+    assign o_hazardFlag = (i_flush) ? (0) : (w_hazardFlag);
 
 	CONTROL_SIGNALS #()
 		CONTROL_SIGNALS(
@@ -104,7 +103,7 @@ module IDECODE #(
 		)
 		RW_REGISTERS(
 			.clk(clk),
-			//.ctrl_clk_mips(ctrl_clk_mips),
+			
 			.reset(reset),
 			.i_flagRegWrite(i_flagRegWrite),
 			.i_readRegister1(i_instruction[25:21]),
@@ -126,7 +125,7 @@ module IDECODE #(
 			.i_rs_IFID(i_instruction [25:21]),
 			.i_rt_IFID(i_instruction [20:16]),
 
-			.o_stallFlag(w_muxControl)
+			.o_hazardFlag(w_hazardFlag)
 			);
 
 	always @(posedge clk, posedge reset) 
@@ -144,7 +143,7 @@ module IDECODE #(
 			o_haltFlag_ID <= 0;
 		end
 
-		//else if(ctrl_clk_mips) begin
+		
 		else begin
 			o_haltFlag_ID <= i_haltFlag_ID;
 

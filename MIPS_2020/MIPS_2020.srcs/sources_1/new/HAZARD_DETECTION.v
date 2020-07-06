@@ -30,11 +30,11 @@ module HAZARD_DETECTION #(
 	input [NB-1:0] i_rs_IFID,
 	input [NB-1:0] i_rt_IFID,
 
-	output o_stallFlag
+	output o_hazardFlag
     );
 
 
-	assign o_stallFlag = ( i_memRead_IDEX == 1 & ( (i_rt_IDEX == i_rs_IFID) | (i_rt_IDEX == i_rt_IFID) ) ) ?
+	assign o_hazardFlag = ( i_memRead_IDEX == 1 & ( (i_rt_IDEX == i_rs_IFID) | (i_rt_IDEX == i_rt_IFID) ) ) ?
 								1 : 0;
 endmodule
 
