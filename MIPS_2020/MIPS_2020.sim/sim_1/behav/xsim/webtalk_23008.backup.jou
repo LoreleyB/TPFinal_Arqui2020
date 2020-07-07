@@ -2,8 +2,8 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Jul  2 19:08:21 2020
-# Process ID: 6184
+# Start of session at: Mon Jul  6 20:09:59 2020
+# Process ID: 23008
 # Current directory: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim/xsim.dir/TB_MIPS_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim/webtalk.log

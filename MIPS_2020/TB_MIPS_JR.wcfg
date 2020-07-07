@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_MIPS_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_MIPS" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="138801fs"></ZoomEndTime>
+      <Cursor1Time time="15000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="227"></NameColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/TB_MIPS/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_pcSrc" type="array">
+      <obj_property name="ElementShortName">i_pcSrc[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcSrc[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_pcJump" type="array">
+      <obj_property name="ElementShortName">i_pcJump[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcJump[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_pcBranch" type="array">
+      <obj_property name="ElementShortName">i_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_pcRegister" type="array">
+      <obj_property name="ElementShortName">i_pcRegister[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcRegister[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/o_PC" type="array">
+      <obj_property name="ElementShortName">o_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PC[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/o_instruction" type="array">
+      <obj_property name="ElementShortName">o_instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_instruction[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/o_signalControlEX" type="array">
+      <obj_property name="ElementShortName">o_signalControlEX[10:0]</obj_property>
+      <obj_property name="ObjectShortName">o_signalControlEX[10:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/o_signalControlME" type="array">
+      <obj_property name="ElementShortName">o_signalControlME[8:0]</obj_property>
+      <obj_property name="ObjectShortName">o_signalControlME[8:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/o_signalControlWB" type="array">
+      <obj_property name="ElementShortName">o_signalControlWB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_signalControlWB[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/i_dataRegA" type="array">
+      <obj_property name="ElementShortName">i_dataRegA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dataRegA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/i_dataRegB" type="array">
+      <obj_property name="ElementShortName">i_dataRegB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dataRegB[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/i_dataMEM_FW" type="array">
+      <obj_property name="ElementShortName">i_dataMEM_FW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dataMEM_FW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/i_dataWB_FW" type="array">
+      <obj_property name="ElementShortName">i_dataWB_FW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dataWB_FW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/o_controlFWMuxA" type="array">
+      <obj_property name="ElementShortName">o_controlFWMuxA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_controlFWMuxA[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/o_controlFWMuxB" type="array">
+      <obj_property name="ElementShortName">o_controlFWMuxB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_controlFWMuxB[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/o_alu" type="array">
+      <obj_property name="ElementShortName">o_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/o_addressMem" type="array">
+      <obj_property name="ElementShortName">o_addressMem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_addressMem[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/o_readData" type="array">
+      <obj_property name="ElementShortName">o_readData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_readData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/DATA_RAM/r_matrixDRAM[1]" type="array">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[1]" type="array">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+</wave_config>
