@@ -43,7 +43,7 @@ module IFETCH #(
     wire [len-1:0] w_pctoSumadorMem;
     wire [len-1:0] w_instruction;
     wire w_validI;
-    wire w_flush = i_pcSrc[0];
+    wire w_flush = i_pcSrc[0]; //flagBranch
     //wire w_flush = i_pcSrc;
 
     assign o_instruction = w_instruction;
@@ -68,7 +68,7 @@ module IFETCH #(
 			.i_PC((w_validI)?(w_pctoSumadorMem):(w_muxPc)),
 			.clk(clk),
 			.reset(reset),
-			.enable(i_stallFlag),
+			.enable(i_stallFlag),//hazard
 			.o_PC(w_pctoSumadorMem)
 			);
 

@@ -62,7 +62,7 @@ module INSTRUCTION_RAM #(
 			r_instructionRAM <= 0;
 		end
 		
-		else if (enable)	begin
+		else if (enable)	begin //no hazard
 				if(i_flush)
 				    r_instructionRAM <= 0; //NOP
                 else

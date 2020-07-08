@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_MIPS_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_MIPS" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="26070fs"></ZoomStartTime>
+      <ZoomEndTime time="38871fs"></ZoomEndTime>
+      <Cursor1Time time="56200fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="227"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/TB_MIPS/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/o_instruction" type="array">
+      <obj_property name="ElementShortName">o_instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/o_PC" type="array">
+      <obj_property name="ElementShortName">o_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PC[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_pcSrc" type="array">
+      <obj_property name="ElementShortName">i_pcSrc[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcSrc[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_pcBranch" type="array">
+      <obj_property name="ElementShortName">i_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/o_pcBranch" type="array">
+      <obj_property name="ElementShortName">o_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/i_flush" type="logic">
+      <obj_property name="ElementShortName">i_flush</obj_property>
+      <obj_property name="ObjectShortName">i_flush</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/i_pcBranch" type="array">
+      <obj_property name="ElementShortName">i_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/o_pcBranch" type="array">
+      <obj_property name="ElementShortName">o_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/i_flush" type="logic">
+      <obj_property name="ElementShortName">i_flush</obj_property>
+      <obj_property name="ObjectShortName">i_flush</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/i_pcBranch" type="array">
+      <obj_property name="ElementShortName">i_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/o_pcBranch" type="array">
+      <obj_property name="ElementShortName">o_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/o_zeroFlag" type="logic">
+      <obj_property name="ElementShortName">o_zeroFlag</obj_property>
+      <obj_property name="ObjectShortName">o_zeroFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/i_zeroFlag" type="logic">
+      <obj_property name="ElementShortName">i_zeroFlag</obj_property>
+      <obj_property name="ObjectShortName">i_zeroFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/i_pcBranch" type="array">
+      <obj_property name="ElementShortName">i_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_pcBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/o_pcBranch" type="array">
+      <obj_property name="ElementShortName">o_pcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_pcBranch[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/o_flagBranch" type="logic">
+      <obj_property name="ElementShortName">o_flagBranch</obj_property>
+      <obj_property name="ObjectShortName">o_flagBranch</obj_property>
+   </wvobject>
+</wave_config>
