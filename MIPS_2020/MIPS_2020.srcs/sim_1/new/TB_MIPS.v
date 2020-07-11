@@ -31,7 +31,8 @@ module TB_MIPS(
 	
 
     MIPS#(
-    	.LEN(32)
+    	.LEN(32),
+    	.INIT_FILE("C:/Ensamblador/instructions.bin") //C:/Facultad/TPFinal_Arqui2020/MIPS_2020/program.hex
  		)
         MIPS(
         	.clk(clk),

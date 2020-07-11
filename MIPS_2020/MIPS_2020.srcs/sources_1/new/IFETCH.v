@@ -21,7 +21,8 @@
 
 
 module IFETCH #(
-	parameter len = 32
+	parameter len = 32,
+	parameter INIT_FILE = ""
 	) (
 	input clk,
 	
@@ -75,7 +76,8 @@ module IFETCH #(
 	INSTRUCTION_RAM #(
 		.RAM_WIDTH(len),
 		.RAM_DEPTH(2048),
-		 .INIT_FILE("C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex")
+		.INIT_FILE(INIT_FILE)
+		 //.INIT_FILE("C:/Facultad/TPFinal_Arqui2020/MIPS_2020/program.hex")
 		//.RAM_PERFORMANCE("LOW_LATENCY")
 		)
 		INSTRUCTION_RAM(

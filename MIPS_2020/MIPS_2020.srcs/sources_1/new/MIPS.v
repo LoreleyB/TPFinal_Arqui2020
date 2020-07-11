@@ -26,7 +26,8 @@ module MIPS#(
 	parameter NB = $clog2(LEN),
 	parameter len_exec_bus = 11,
 	parameter len_mem_bus = 9,
-	parameter len_wb_bus = 2
+	parameter len_wb_bus = 2,
+	parameter INIT_FILE = "" 
 	)(
 	input clk,
 	input reset,
@@ -80,7 +81,7 @@ module MIPS#(
 	     w_haltFlag_EXMEM,
 	     w_haltFlag_MEMWB; 
 
-	assign w_writeData_WBID = (w_signalControlWB_bus[0]) ? w_readData : w_addressMem_aluResult;
+	//assign w_writeData_WBID = (w_signalControlWB_bus[0]) ? w_readData : w_addressMem_aluResult;
 	//si MemtoReg=1 toma dato de memoria, sino toma resultado de Alu, ultimo mux
 
 	assign o_PC = w_PC;
@@ -88,7 +89,8 @@ module MIPS#(
 
 
 	IFETCH #(
-		.len(LEN)
+		.len(LEN),
+		.INIT_FILE(INIT_FILE)
 		)
 		IFETCH(
 			.clk(clk),
@@ -98,7 +100,7 @@ module MIPS#(
 			.i_pcJump(w_pcJump),
 			.i_pcBranch(w_pcBranch_MEMIF),
 			.i_pcRegister(w_pcJumpRegister),
-			.i_stallFlag(!w_hazardFlag),// Hazzard Detection, enable del modulo PC
+			.i_stallFlag(!w_hazardFlag),// Hazzard Detection, enable del modulo PC			
 
 
 			.o_pcBranch(w_pcBranch_IFID),
@@ -224,6 +226,17 @@ module MIPS#(
 			.o_haltFlag_MEM(w_haltFlag_MEMWB)
 			);
 
-
+    //assign w_writeData_WBID = (w_signalControlWB_bus[0]) ? w_readData : w_addressMem_aluResult;
+	//si MemtoReg=1 toma dato de memoria, sino toma resultado de Alu, ultimo mux
+    WRITEBACK #(
+        .len(LEN)
+		)
+		WRITEBACK(
+			.i_memToReg(w_signalControlWB_bus[0]),
+			.i_aluOut(w_addressMem_aluResult),
+			.i_memOut(w_readData),
+			
+			.o_dataRegister(w_writeData_WBID)
+			);
 
 endmodule
