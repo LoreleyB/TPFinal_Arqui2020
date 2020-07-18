@@ -34,6 +34,7 @@ module MIPS#(
     input [LEN-1:0] i_dina,
     input i_writeEnable,
     input [LEN-1:0] i_addressI,
+    input i_stepByStep,
 
 	output [LEN-1:0] o_PC,
 	output o_haltFlag //instruccion final FFFF
@@ -106,6 +107,7 @@ module MIPS#(
 			.i_dina(i_dina),
 			.i_writeEnable(i_writeEnable),
 			.i_addressI (i_addressI),
+			.i_stepByStep (i_stepByStep),
 
 			.o_pcBranch(w_pcBranch_IFID),
 			.o_instruction(w_instruccion),

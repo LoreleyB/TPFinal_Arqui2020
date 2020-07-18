@@ -32,6 +32,8 @@ module IFETCH #(
 	input [len-1:0] i_pcBranch,
 	input [len-1:0] i_pcRegister,
 	input i_stallFlag, //cargar PC y lectura de isntruccion
+	input i_stepByStep,
+	
 	
     input [len-1:0] i_dina,
     input i_writeEnable,
@@ -73,7 +75,7 @@ module IFETCH #(
 			.i_PC((w_validI)?(w_pctoSumadorMem):(w_muxPc)),
 			.clk(clk),
 			.reset(reset),
-			.enable(i_stallFlag),//hazard
+			.enable((i_writeEnable || i_stepByStep ) ? 0 : i_stallFlag),//hazard
 			.o_PC(w_pctoSumadorMem)
 			);
 
