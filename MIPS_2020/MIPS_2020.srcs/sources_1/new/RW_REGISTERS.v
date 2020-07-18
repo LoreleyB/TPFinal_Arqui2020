@@ -33,6 +33,7 @@ module RW_REGISTERS#(
 	input [NB-1:0] i_readRegister2,
 	input [NB-1:0] i_writeRegister,
 	input [width-1:0] i_writeData,
+	input enable, //step by step
 
 	output [width-1:0] o_wireReadData1,
 	output reg [width-1:0] o_readData1,
@@ -59,7 +60,7 @@ module RW_REGISTERS#(
 		end
 
 		
-		else begin
+		else if (enable) begin
 			o_readData1 <= r_dataRegistersMatrix[i_readRegister1];
 			o_readData2 <= r_dataRegistersMatrix[i_readRegister2];
 		end
@@ -70,7 +71,9 @@ module RW_REGISTERS#(
 		
 			if (i_flagRegWrite) 
 			begin
-				r_dataRegistersMatrix[i_writeRegister] <= i_writeData;				
+				if (enable) begin
+				    r_dataRegistersMatrix[i_writeRegister] <= i_writeData;
+				end				
 			end
 		
 	end

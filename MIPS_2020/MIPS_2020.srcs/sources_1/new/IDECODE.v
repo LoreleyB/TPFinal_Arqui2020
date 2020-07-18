@@ -38,6 +38,7 @@ module IDECODE #(
 	input [NB-1:0] i_writeRegister,
 	input i_flush,
 	input i_haltFlag_ID,
+	input i_stepByStep,
 
 	output reg [len-1:0] o_pcBranch,
 	output [len-1:0] o_pcJump,	
@@ -110,6 +111,7 @@ module IDECODE #(
 			.i_readRegister2(i_instruction[20:16]),
 			.i_writeRegister(i_writeRegister),
 			.i_writeData(i_writeData),
+			.enable(!i_stepByStep),
 
 			.o_wireReadData1(w_outRegisterData1),
 			.o_readData1(w_registerData1),
@@ -144,9 +146,9 @@ module IDECODE #(
 		end
 
 		
-		else begin
+		else if (!i_stepByStep) begin
 			o_haltFlag_ID <= i_haltFlag_ID;
-
+            
 			if(i_flush)
 			begin
 				o_pcBranch <= 0;
@@ -159,8 +161,9 @@ module IDECODE #(
 				o_signalControlME <= 0;
 				o_signalControlWB <= 0;
 			end
-			else 
+			else  
 			begin			
+				
 				o_pcBranch <= i_pcBranch;
 				o_signExtend <= $signed(i_instruction[15:0]);   
 				 
@@ -170,7 +173,8 @@ module IDECODE #(
 				o_shamt <= i_instruction [10:6];
 				o_signalControlEX <= w_outMuxControl[(len_mem_bus+len_wb_bus+len_exec_bus)-1:len_mem_bus+len_wb_bus];//ultimos 11 bits
 				o_signalControlME <= w_outMuxControl[(len_mem_bus+len_wb_bus)-1:len_wb_bus];//desde el 2 al 11 bits
-				o_signalControlWB <= w_outMuxControl[len_wb_bus-1:0];//primeros 2		
+				o_signalControlWB <= w_outMuxControl[len_wb_bus-1:0];//primeros 2
+						
 			end	
 		end
 	end

@@ -55,6 +55,7 @@ module IEXECUTE #(
 	input [len-1:0] i_dataWB_FW,
 	input i_flush,
 	input i_haltFlag_EX,
+	input i_stepByStep,
 	
 	output reg [len-1:0] o_pcBranch,
 	output reg [len-1:0] o_alu,
@@ -143,7 +144,7 @@ module IEXECUTE #(
 		end
 
 		
-		else begin
+		else if (!i_stepByStep) begin
 			o_haltFlag_EX <= i_haltFlag_EX;
 
 			if (i_flush) 

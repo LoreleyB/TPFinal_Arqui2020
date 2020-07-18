@@ -90,7 +90,8 @@ module IFETCH #(
 			.i_addressI(i_writeEnable ? i_addressI : w_pctoSumadorMem),
 			.clka(clk),
 			.reset(reset),
-			.enable(i_stallFlag),
+			.enable((i_writeEnable || i_stepByStep ) ? 0 : i_stallFlag),//hazard
+			//.enable(i_stallFlag),
 			.o_validI(w_validI),
 			.i_flush(w_flush),
 			.o_dataI(w_instruction),
@@ -115,7 +116,7 @@ module IFETCH #(
 		end
 
         
-        else begin
+        else if (!i_stepByStep) begin
             o_haltFlag_IF <= w_validI;
     
             if (i_stallFlag | w_flush) 

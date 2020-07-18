@@ -70,13 +70,14 @@ module TB_MIPS(
 	
     
         //step by step
-//        #10
+        #10
+        i_stepByStep=1;
+        #40
+        i_stepByStep=0;
+//        #35
 //        i_stepByStep=1;
-//        #10
+//        #15
 //        i_stepByStep=0;
-//        #10
-//        i_stepByStep=1;
-    
     end
     
     

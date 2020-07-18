@@ -129,6 +129,7 @@ module MIPS#(
 			.i_writeRegister(w_writeReg_MEMID),
 			.i_flush(w_flagBranch),
 			.i_haltFlag_ID(w_haltFlag_IFID),
+			.i_stepByStep(i_stepByStep),
 			
 			.o_pcBranch(w_pcBranch_IDEX),
 			.o_pcJump(w_pcJump),
@@ -183,12 +184,14 @@ module MIPS#(
 			.i_rd_EXMEM(w_writeReg_EXMEM),
 			.i_rd_MEMWB(w_writeReg_MEMID),
 			.i_rs(w_rs),
+			
 
 			.i_dataMEM_FW(w_aluResult),
 			.i_dataWB_FW(w_writeData_WBID),
 			.i_flush(w_flagBranch),
 		
 		    .i_haltFlag_EX(w_haltFlag_IDEX),
+            .i_stepByStep(i_stepByStep),		    
 			
 			.o_pcBranch(w_pcBranch_EXMEM),
 			.o_alu(w_aluResult),
@@ -220,6 +223,7 @@ module MIPS#(
 			.i_pcBranch(w_pcBranch_EXMEM),
 
 			.i_haltFlag_MEM(w_haltFlag_EXMEM),
+			.i_stepByStep(i_stepByStep),
 			
 			//outputs		
 			.o_readData(w_readData),
