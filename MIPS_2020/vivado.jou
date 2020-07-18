@@ -2,10 +2,10 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jul  5 19:36:31 2020
-# Process ID: 16568
+# Start of session at: Sun Jul 12 11:00:43 2020
+# Process ID: 4180
 # Current directory: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11336 C:\Arquitectura\TPFinal_Arqui2020\MIPS_2020\MIPS_2020.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3172 C:\Arquitectura\TPFinal_Arqui2020\MIPS_2020\MIPS_2020.xpr
 # Log file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/vivado.log
 # Journal file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020\vivado.jou
 #-----------------------------------------------------------
@@ -15,15 +15,35 @@ update_compile_order -fileset sources_1
 launch_simulation
 open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg
 open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg
+open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg
+open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg
 source TB_MIPS.tcl
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg}
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg}
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg}
+add_files -fileset sim_1 -norecurse C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg
+set_property xsim.view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg} [get_filesets sim_1]
 relaunch_sim
-close_sim
-launch_simulation
-open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg
-open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg
-source TB_MIPS.tcl
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg}
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg}
+relaunch_sim
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_HALT.wcfg}
+add_files -fileset sim_1 -norecurse C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_HALT.wcfg
+set_property xsim.view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_HALT.wcfg} [get_filesets sim_1]
+relaunch_sim
+relaunch_sim
+relaunch_sim
 relaunch_sim
 relaunch_sim
 relaunch_sim

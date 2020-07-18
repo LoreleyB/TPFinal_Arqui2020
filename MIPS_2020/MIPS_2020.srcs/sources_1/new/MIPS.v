@@ -31,7 +31,9 @@ module MIPS#(
 	)(
 	input clk,
 	input reset,
-
+    input [LEN-1:0] i_dina,
+    input i_writeEnable,
+    input [LEN-1:0] i_addressI,
 
 	output [LEN-1:0] o_PC,
 	output o_haltFlag //instruccion final FFFF
@@ -101,7 +103,9 @@ module MIPS#(
 			.i_pcBranch(w_pcBranch_MEMIF),
 			.i_pcRegister(w_pcJumpRegister),
 			.i_stallFlag(!w_hazardFlag),// Hazzard Detection, enable del modulo PC			
-
+			.i_dina(i_dina),
+			.i_writeEnable(i_writeEnable),
+			.i_addressI (i_addressI),
 
 			.o_pcBranch(w_pcBranch_IFID),
 			.o_instruction(w_instruccion),

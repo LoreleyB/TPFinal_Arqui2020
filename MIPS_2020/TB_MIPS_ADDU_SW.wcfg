@@ -11,160 +11,146 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="69401fs"></ZoomEndTime>
-      <Cursor1Time time="1000000fs"></Cursor1Time>
+      <ZoomStartTime time="31860fs"></ZoomStartTime>
+      <ZoomEndTime time="101661fs"></ZoomEndTime>
+      <Cursor1Time time="70000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="227"></NameColumnWidth>
-      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="33" />
+   <WVObjectSize size="22" />
    <wvobject fp_name="/TB_MIPS/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/o_alu" type="array">
-      <obj_property name="ElementShortName">o_alu[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_alu[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/o_writeReg" type="array">
-      <obj_property name="ElementShortName">o_writeReg[4:0]</obj_property>
-      <obj_property name="ObjectShortName">o_writeReg[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix" type="array">
-      <obj_property name="ElementShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[4]" type="array">
-      <obj_property name="ElementShortName">[4][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[4][31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/DATA_RAM/i_dataD" type="array">
-      <obj_property name="ElementShortName">i_dataD[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_dataD[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/r_dataIn" type="array">
-      <obj_property name="ElementShortName">r_dataIn[31:0]</obj_property>
-      <obj_property name="ObjectShortName">r_dataIn[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_registerWrite_MEMWB" type="logic">
-      <obj_property name="ElementShortName">i_registerWrite_MEMWB</obj_property>
-      <obj_property name="ObjectShortName">i_registerWrite_MEMWB</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_rd_EXMEM" type="array">
-      <obj_property name="ElementShortName">i_rd_EXMEM[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i_rd_EXMEM[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_rd_MEMWB" type="array">
-      <obj_property name="ElementShortName">i_rd_MEMWB[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i_rd_MEMWB[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_rt_IDEX" type="array">
-      <obj_property name="ElementShortName">i_rt_IDEX[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i_rt_IDEX[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/o_controlFWMuxB" type="array">
-      <obj_property name="ElementShortName">o_controlFWMuxB[1:0]</obj_property>
-      <obj_property name="ObjectShortName">o_controlFWMuxB[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/MUX_FORWARDING_B/i_dataReg" type="array">
-      <obj_property name="ElementShortName">i_dataReg[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_dataReg[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/MUX_FORWARDING_B/i_dataMEM" type="array">
-      <obj_property name="ElementShortName">i_dataMEM[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_dataMEM[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/MUX_FORWARDING_B/i_dataWB" type="array">
-      <obj_property name="ElementShortName">i_dataWB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_dataWB[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/MUX_FORWARDING_B/select" type="array">
-      <obj_property name="ElementShortName">select[1:0]</obj_property>
-      <obj_property name="ObjectShortName">select[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/MUX_FORWARDING_B/o_dataMux" type="array">
-      <obj_property name="ElementShortName">o_dataMux[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_dataMux[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/ALU/o_zeroFlag" type="logic">
-      <obj_property name="ElementShortName">o_zeroFlag</obj_property>
-      <obj_property name="ObjectShortName">o_zeroFlag</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_jump" type="array">
-      <obj_property name="ElementShortName">i_jump[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_jump[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_branch" type="array">
-      <obj_property name="ElementShortName">i_branch[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_branch[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_register" type="array">
-      <obj_property name="ElementShortName">i_register[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_register[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_PC" type="array">
-      <obj_property name="ElementShortName">i_PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_PC[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/i_select" type="array">
-      <obj_property name="ElementShortName">i_select[2:0]</obj_property>
-      <obj_property name="ObjectShortName">i_select[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/PC_MUX/o_PC_MUX" type="array">
-      <obj_property name="ElementShortName">o_PC_MUX[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_PC_MUX[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/i_stallFlag" type="logic">
-      <obj_property name="ElementShortName">i_stallFlag</obj_property>
-      <obj_property name="ObjectShortName">i_stallFlag</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/w_flagBranch" type="logic">
-      <obj_property name="ElementShortName">w_flagBranch</obj_property>
-      <obj_property name="ObjectShortName">w_flagBranch</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[1]" type="array">
-      <obj_property name="ElementShortName">[1][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/o_pcJumpRegister" type="array">
-      <obj_property name="ElementShortName">o_pcJumpRegister[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_pcJumpRegister[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/o_flagJumpRegister" type="logic">
-      <obj_property name="ElementShortName">o_flagJumpRegister</obj_property>
-      <obj_property name="ObjectShortName">o_flagJumpRegister</obj_property>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/o_instruction" type="array">
+      <obj_property name="ElementShortName">o_instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_instruction[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/o_PC" type="array">
       <obj_property name="ElementShortName">o_PC[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_PC[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/o_instruction" type="array">
-      <obj_property name="ElementShortName">o_instruction[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_instruction[31:0]</obj_property>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_registerWrite_EXMEM" type="logic">
+      <obj_property name="ElementShortName">i_registerWrite_EXMEM</obj_property>
+      <obj_property name="ObjectShortName">i_registerWrite_EXMEM</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_registerWrite_MEMWB" type="logic">
+      <obj_property name="ElementShortName">i_registerWrite_MEMWB</obj_property>
+      <obj_property name="ObjectShortName">i_registerWrite_MEMWB</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_rd_EXMEM" type="array">
+      <obj_property name="ElementShortName">i_rd_EXMEM[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rd_EXMEM[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_rd_MEMWB" type="array">
+      <obj_property name="ElementShortName">i_rd_MEMWB[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rd_MEMWB[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_rt_IDEX" type="array">
+      <obj_property name="ElementShortName">i_rt_IDEX[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rt_IDEX[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/i_rs_IDEX" type="array">
+      <obj_property name="ElementShortName">i_rs_IDEX[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rs_IDEX[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/o_controlFWMuxA" type="array">
+      <obj_property name="ElementShortName">o_controlFWMuxA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_controlFWMuxA[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/FORWARDING_UNIT/o_controlFWMuxB" type="array">
+      <obj_property name="ElementShortName">o_controlFWMuxB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_controlFWMuxB[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/MUX_FORWARDING_A/o_dataMux" type="array">
+      <obj_property name="ElementShortName">o_dataMux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_dataMux[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/i_instruction" type="array">
-      <obj_property name="ElementShortName">i_instruction[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_instruction[31:0]</obj_property>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/MUX_FORWARDING_B/o_dataMux" type="array">
+      <obj_property name="ElementShortName">o_dataMux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_dataMux[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/ALU/i_dataA" type="array">
+      <obj_property name="ElementShortName">i_dataA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dataA[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/ALU/i_dataB" type="array">
+      <obj_property name="ElementShortName">i_dataB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dataB[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/ALU/i_opCode" type="array">
+      <obj_property name="ElementShortName">i_opCode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i_opCode[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/o_alu" type="array">
+      <obj_property name="ElementShortName">o_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_alu[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/o_writeReg" type="array">
+      <obj_property name="ElementShortName">o_writeReg[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_writeReg[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/WRITEBACK/i_memToReg" type="logic">
+      <obj_property name="ElementShortName">i_memToReg</obj_property>
+      <obj_property name="ObjectShortName">i_memToReg</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/WRITEBACK/o_dataRegister" type="array">
+      <obj_property name="ElementShortName">o_dataRegister[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_dataRegister[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix" type="array">
+      <obj_property name="ElementShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_dataRegistersMatrix[31:0][31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

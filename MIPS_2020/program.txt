@@ -1,0 +1,2 @@
+SUBU 1,2,3 ; comentario
+HALT ;

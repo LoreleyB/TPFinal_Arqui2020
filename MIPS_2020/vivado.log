@@ -2,10 +2,10 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jul  5 19:36:31 2020
-# Process ID: 16568
+# Start of session at: Sun Jul 12 11:00:43 2020
+# Process ID: 4180
 # Current directory: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11336 C:\Arquitectura\TPFinal_Arqui2020\MIPS_2020\MIPS_2020.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3172 C:\Arquitectura\TPFinal_Arqui2020\MIPS_2020\MIPS_2020.xpr
 # Log file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/vivado.log
 # Journal file: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020\vivado.jou
 #-----------------------------------------------------------
@@ -16,7 +16,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 836.035 ; gain = 247.324
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 867.418 ; gain = 284.836
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
@@ -28,6 +28,44 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/ALU_CONTROL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_CONTROL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/CONTROL_SIGNALS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONTROL_SIGNALS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/DATA_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DATA_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/FORWARDING_UNIT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FORWARDING_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/HAZARD_DETECTION.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HAZARD_DETECTION
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IDECODE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDECODE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IEXECUTE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IEXECUTE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IFETCH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFETCH
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/IMEMORY.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IMEMORY
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/INSTRUCTION_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module INSTRUCTION_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/MUX_FORWARDING.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX_FORWARDING
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC_MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/PC_SUM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_SUM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/RW_REGISTERS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RW_REGISTERS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/WRITEBACK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WRITEBACK
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_MIPS
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
@@ -38,19 +76,46 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'i_addressDebug' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v:33]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC_MUX
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.INSTRUCTION_RAM(INIT_FILE="C:/En...
+Compiling module xil_defaultlib.PC_SUM
+Compiling module xil_defaultlib.IFETCH(INIT_FILE="C:/Ensamblador...
+Compiling module xil_defaultlib.ALU_CONTROL
+Compiling module xil_defaultlib.CONTROL_SIGNALS
+Compiling module xil_defaultlib.RW_REGISTERS(NB=5)
+Compiling module xil_defaultlib.HAZARD_DETECTION_default
+Compiling module xil_defaultlib.IDECODE_default
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.FORWARDING_UNIT_default
+Compiling module xil_defaultlib.MUX_FORWARDING
+Compiling module xil_defaultlib.IEXECUTE_default
+Compiling module xil_defaultlib.DATA_RAM_default
+Compiling module xil_defaultlib.IMEMORY_default
+Compiling module xil_defaultlib.WRITEBACK
+Compiling module xil_defaultlib.MIPS(INIT_FILE="C:/Ensamblador/i...
+Compiling module xil_defaultlib.TB_MIPS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TB_MIPS_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "TB_MIPS_behav -key {Behavioral:sim_1:Functional:TB_MIPS} -tclbatch {TB_MIPS.tcl} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg} -log {simulate.log}"
+   with args "TB_MIPS_behav -key {Behavioral:sim_1:Functional:TB_MIPS} -tclbatch {TB_MIPS.tcl} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2019.2
 Time resolution is 1 ps
 open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg
+WARNING: Simulation object /TB_MIPS/flag was not found in the design.
+WARNING: Simulation object /TB_MIPS/MIPS/IFETCH/INSTRUCTION_RAM/ram_data was not found in the design.
+WARNING: Simulation object /TB_MIPS/MIPS/IMEMORY/DATA_RAM/BRAM[6] was not found in the design.
 open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg
+open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg
+open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg
 source TB_MIPS.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -62,15 +127,17 @@ source TB_MIPS.tcl
 #   }
 # }
 # run 1000ns
-xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 882.734 ; gain = 36.340
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 906.949 ; gain = 7.098
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'TB_MIPS_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 882.734 ; gain = 39.500
-launch_runs synth_1 -jobs 2
-[Sun Jul  5 19:39:55 2020] Launched synth_1...
-Run output will be captured here: C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1/runme.log
+launch_simulation: Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 906.949 ; gain = 21.180
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg}
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg}
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg}
+add_files -fileset sim_1 -norecurse C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg
+set_property xsim.view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg} [get_filesets sim_1]
 relaunch_sim
-suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 912.238 ; gain = 0.000
+suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 943.941 ; gain = 0.000
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -92,17 +159,99 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'i_addressDebug' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v:33]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 912.238 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 943.941 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 943.941 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 943.941 ; gain = 0.000
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg}
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 943.941 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
@@ -112,6 +261,8 @@ INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj TB_MIPS_vlog.prj"
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 "xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
@@ -121,33 +272,72 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'i_addressDebug' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v:33]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "TB_MIPS_behav -key {Behavioral:sim_1:Functional:TB_MIPS} -tclbatch {TB_MIPS.tcl} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg} -view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg
-open_wave_config C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg
-source TB_MIPS.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'TB_MIPS_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 912.238 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1116.523 ; gain = 0.000
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg}
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg}
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1116.523 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 1116.523 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1116.523 ; gain = 0.000
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg}
 relaunch_sim
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
@@ -170,13 +360,13 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'i_addressDebug' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v:33]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 919.938 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1116.523 ; gain = 0.000
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg}
 relaunch_sim
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
@@ -187,7 +377,7 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj TB_MIPS_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-3] XSim::Elaborate design
@@ -199,42 +389,12 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'i_addressDebug' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v:33]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 919.938 ; gain = 0.000
-relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
-"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.2
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'i_addressDebug' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v:33]
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2019.2
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 919.938 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1116.523 ; gain = 0.000
 relaunch_sim
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
@@ -279,8 +439,187 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/M
 INFO: [VRFC 10-311] analyzing module PC_SUM
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/RW_REGISTERS.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RW_REGISTERS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sources_1/new/WRITEBACK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WRITEBACK
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module TB_MIPS
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC_MUX
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.INSTRUCTION_RAM(INIT_FILE="C:/En...
+Compiling module xil_defaultlib.PC_SUM
+Compiling module xil_defaultlib.IFETCH(INIT_FILE="C:/Ensamblador...
+Compiling module xil_defaultlib.ALU_CONTROL
+Compiling module xil_defaultlib.CONTROL_SIGNALS
+Compiling module xil_defaultlib.RW_REGISTERS(NB=5)
+Compiling module xil_defaultlib.HAZARD_DETECTION_default
+Compiling module xil_defaultlib.IDECODE_default
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.FORWARDING_UNIT_default
+Compiling module xil_defaultlib.MUX_FORWARDING
+Compiling module xil_defaultlib.IEXECUTE_default
+Compiling module xil_defaultlib.DATA_RAM_default
+Compiling module xil_defaultlib.IMEMORY_default
+Compiling module xil_defaultlib.WRITEBACK
+Compiling module xil_defaultlib.MIPS(INIT_FILE="C:/Ensamblador/i...
+Compiling module xil_defaultlib.TB_MIPS
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TB_MIPS_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim/xsim.dir/TB_MIPS_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim/xsim.dir/TB_MIPS_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Jul 15 15:22:51 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul 15 15:22:51 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1116.523 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1116.523 ; gain = 0.000
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 1116.523 ; gain = 0.000
+save_wave_config {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_HALT.wcfg}
+add_files -fileset sim_1 -norecurse C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_HALT.wcfg
+set_property xsim.view {C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_Halt_flag.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_ADDU_SW.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_JR.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_BEQ.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_FORWARDING.wcfg C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/TB_MIPS_HALT.wcfg} [get_filesets sim_1]
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.523 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.523 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.523 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.523 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
@@ -293,43 +632,65 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'i_addressDebug' is not connected on this instance [C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.srcs/sim_1/new/TB_MIPS.v:33]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.PC_MUX
-Compiling module xil_defaultlib.PC
-Compiling module xil_defaultlib.INSTRUCTION_RAM(RAM_PERFORMANCE=...
-Compiling module xil_defaultlib.PC_SUM
-Compiling module xil_defaultlib.IFETCH
-Compiling module xil_defaultlib.ALU_CONTROL
-Compiling module xil_defaultlib.CONTROL_SIGNALS
-Compiling module xil_defaultlib.RW_REGISTERS(NB=5)
-Compiling module xil_defaultlib.HAZARD_DETECTION_default
-Compiling module xil_defaultlib.IDECODE_default
-Compiling module xil_defaultlib.ALU
-Compiling module xil_defaultlib.FORWARDING_UNIT_default
-Compiling module xil_defaultlib.MUX_FORWARDING
-Compiling module xil_defaultlib.IEXECUTE_default
-Compiling module xil_defaultlib.DATA_RAM(RAM_WIDTH=32,RAM_DEPTH=...
-Compiling module xil_defaultlib.IMEMORY_default
-Compiling module xil_defaultlib.MIPS_default
-Compiling module xil_defaultlib.TB_MIPS
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot TB_MIPS_behav
-
-****** Webtalk v2019.2 (64-bit)
-  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-source C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim/xsim.dir/TB_MIPS_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim/xsim.dir/TB_MIPS_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Jul  5 20:39:17 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sun Jul  5 20:39:17 2020...
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 919.938 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 919.938 ; gain = 0.000
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 919.938 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.523 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.523 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_MIPS' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TB_MIPS_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.sim/sim_1/behav/xsim'
+"xelab -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cb1cced68c384c0da0b88741a502abb5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_MIPS_behav xil_defaultlib.TB_MIPS xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.523 ; gain = 0.000

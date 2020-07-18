@@ -29,7 +29,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="363"/>
+    <Option Name="WTXSimLaunchSim" Val="437"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -170,6 +170,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/WRITEBACK.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/MIPS.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -266,6 +273,16 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/TB_MIPS_FORWARDING.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/TB_MIPS_HALT.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="TB_MIPS"/>
@@ -278,6 +295,8 @@
         <Option Name="XSimWcfgFile" Val="$PPRDIR/TB_MIPS_ADDU_SW.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/TB_MIPS_JR.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/TB_MIPS_BEQ.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/TB_MIPS_FORWARDING.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/TB_MIPS_HALT.wcfg"/>
         <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
     </FileSet>

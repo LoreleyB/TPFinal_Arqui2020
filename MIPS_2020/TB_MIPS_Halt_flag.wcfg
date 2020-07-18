@@ -11,27 +11,47 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="518306fs"></ZoomEndTime>
-      <Cursor1Time time="45000fs"></Cursor1Time>
+      <ZoomStartTime time="60000fs"></ZoomStartTime>
+      <ZoomEndTime time="194401fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="227"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="40" />
    <wvobject fp_name="/TB_MIPS/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/TB_MIPS/flag" type="logic">
-      <obj_property name="ElementShortName">flag</obj_property>
-      <obj_property name="ObjectShortName">flag</obj_property>
+   <wvobject fp_name="/TB_MIPS/MIPS/i_dina" type="array">
+      <obj_property name="ElementShortName">i_dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dina[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/i_addressI" type="array">
+      <obj_property name="ElementShortName">i_addressI[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_addressI[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/INSTRUCTION_RAM/i_addressI" type="array">
+      <obj_property name="ElementShortName">i_addressI[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_addressI[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/o_PC" type="array">
       <obj_property name="ElementShortName">o_PC[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_PC[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/INSTRUCTION_RAM/i_dina" type="array">
+      <obj_property name="ElementShortName">i_dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dina[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/INSTRUCTION_RAM/i_writeEnable" type="logic">
+      <obj_property name="ElementShortName">i_writeEnable</obj_property>
+      <obj_property name="ObjectShortName">i_writeEnable</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/IEXECUTE/ALU/i_dataA" type="array">
       <obj_property name="ElementShortName">i_dataA[31:0]</obj_property>
@@ -98,11 +118,6 @@
       <obj_property name="ObjectShortName">o_dataMux[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/INSTRUCTION_RAM/ram_data" type="array">
-      <obj_property name="ElementShortName">ram_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ram_data[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/IFETCH/INSTRUCTION_RAM/o_dataI" type="array">
       <obj_property name="ElementShortName">o_dataI[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_dataI[31:0]</obj_property>
@@ -111,11 +126,6 @@
       <obj_property name="ElementShortName">o_alu[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_alu[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_MIPS/MIPS/IMEMORY/DATA_RAM/BRAM[6]" type="array">
-      <obj_property name="ElementShortName">[6][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[6][31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_MIPS/MIPS/IDECODE/RW_REGISTERS/r_dataRegistersMatrix[4]" type="array">
       <obj_property name="ElementShortName">[4][31:0]</obj_property>
