@@ -30,7 +30,9 @@ module INSTRUCTION_RAM #(
   input enable,                              
   input i_flush,
   input reset,
-  output [RAM_WIDTH-1:0] o_dataI,           
+  output [RAM_WIDTH-1:0] o_dataI,  
+  input [RAM_WIDTH-1:0] i_data_address,
+  input i_W_E,        
   output o_validI       // ultima instruccion FFFF
 );
 
@@ -40,8 +42,6 @@ module INSTRUCTION_RAM #(
 
   assign o_validI = &r_matrixIRAM[i_addressI][RAM_WIDTH-1:RAM_WIDTH-6];  
    // verifica si el opcode es 111111, si lo hace haltflag (final de instrucciones FFFF) . Hace & (AND) bit a bit de los bits 31 al 26 de la PC 
-   
-
   // The following code either initializes the memory values to a specified file or to all zeros to match hardware
   generate
     if (INIT_FILE != "") begin: use_init_file
@@ -56,6 +56,11 @@ module INSTRUCTION_RAM #(
     end
   endgenerate
 
+  always @(posedge clka) begin
+	if (i_W_E) begin
+	   r_matrixIRAM[i_addressI] <= i_data_address;  //escribe en memorio de instrucciones
+	end 
+  end
   always @(posedge clka, posedge reset)
   begin
 		if(reset) begin

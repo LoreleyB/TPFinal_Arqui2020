@@ -26,10 +26,15 @@ module MIPS#(
 	parameter NB = $clog2(LEN),
 	parameter len_exec_bus = 11,
 	parameter len_mem_bus = 9,
-	parameter len_wb_bus = 2
+	parameter len_wb_bus = 2,
+	parameter INIT_FILE = ""
 	)(
 	input clk,
 	input reset,
+	input [LEN-1:0] i_data_address,
+    input i_W_E,
+	input [LEN-1:0] i_instruc_address,
+	input i_debug,
 
 
 	output [LEN-1:0] o_PC,
@@ -99,9 +104,12 @@ module MIPS#(
 			.i_pcBranch(w_pcBranch_MEMIF),
 			.i_pcRegister(w_pcJumpRegister),
 			.i_stallFlag(!w_hazardFlag),// Hazzard Detection, enable del modulo PC
-
-
-			.o_pcBranch(w_pcBranch_IFID),
+			.i_data_address(i_data_address),
+            .i_W_E (i_W_E),
+            .i_instruc_address (i_instruc_address),
+            .i_debug (i_debug),
+ 
+            .o_pcBranch(w_pcBranch_IFID),
 			.o_instruction(w_instruccion),
 			.o_PC(w_PC), 
 			.o_haltFlag_IF(w_haltFlag_IFID)
@@ -121,6 +129,7 @@ module MIPS#(
 			.i_writeRegister(w_writeReg_MEMID),
 			.i_flush(w_flagBranch),
 			.i_haltFlag_ID(w_haltFlag_IFID),
+			.i_debug (i_debug),
 			
 			.o_pcBranch(w_pcBranch_IDEX),
 			.o_pcJump(w_pcJump),
@@ -132,21 +141,13 @@ module MIPS#(
 			.o_rd(w_rd),
 			.o_rs(w_rs),
 			.o_shamt(w_shamt),
-
-			
             .o_haltFlag_ID(w_haltFlag_IDEX),
-            
-
 			.o_flagJump(w_flagJump),
 			.o_flagJumpRegister(w_flagJumpRegister),
 			.o_signalControlEX(w_signalControlEX),
             .o_signalControlME(w_signalControlME_IDEX),
 			.o_signalControlWB(w_signalControlWB_IDEX),
-
-			.o_hazardFlag(w_hazardFlag)
-
-			
-			
+			.o_hazardFlag(w_hazardFlag)	
 		);
 
 	IEXECUTE #(
@@ -154,9 +155,7 @@ module MIPS#(
 		)
 		IEXECUTE(
 			.clk(clk),
-			
 			.reset(reset),
-		
 			.i_pcBranch(w_pcBranch_IDEX),
 			.i_dataRegA(w_registerDataA),
 			.i_dataRegB(w_registerDataB),
@@ -164,32 +163,27 @@ module MIPS#(
 			.i_rt(w_rt),
 			.i_rd(w_rd),
 			.i_shamt(w_shamt),
-		
 			.i_signalControlEX(w_signalControlEX),
 			.i_signalControlME(w_signalControlME_IDEX),
 			.i_signalControlWB(w_signalControlWB_IDEX), 
-
             //FW
 			.i_registerWrite_EXMEM(w_signalControlWB_EXMEM[1]),// señal RegWrite 
 			.i_registerWrite_MEMWB(w_signalControlWB_bus[1]),// señal RegWrite
 			.i_rd_EXMEM(w_writeReg_EXMEM),
 			.i_rd_MEMWB(w_writeReg_MEMID),
 			.i_rs(w_rs),
-
 			.i_dataMEM_FW(w_aluResult),
 			.i_dataWB_FW(w_writeData_WBID),
 			.i_flush(w_flagBranch),
-		
 		    .i_haltFlag_EX(w_haltFlag_IDEX),
+			.i_debug (i_debug),
 			
 			.o_pcBranch(w_pcBranch_EXMEM),
 			.o_alu(w_aluResult),
 			.o_zeroFlag(w_zeroFlag),
 			.o_dataRegB(w_writeData_EXMEM),
 			.o_writeReg(w_writeReg_EXMEM),
-		
 			.o_haltFlag_EX(w_haltFlag_EXMEM),
-			
 			// seÃ±ales de control
 			.o_signalControlME(w_signalControlME_EXMEM),
 			.o_signalControlWB(w_signalControlWB_EXMEM)
@@ -199,19 +193,17 @@ module MIPS#(
 		.len(LEN)
 		)
 		IMEMORY(
-			.clk(clk),
-			
+			.clk(clk),	
 			.reset(reset),
 			.i_addressMem(w_aluResult),
-			.i_writeData(w_writeData_EXMEM),
-			
+			.i_writeData(w_writeData_EXMEM),		
 			.i_signalControlME(w_signalControlME_EXMEM),
 		    .i_signalControlWB(w_signalControlWB_EXMEM),
 			.i_writeReg(w_writeReg_EXMEM),			
 			.i_zeroFlag(w_zeroFlag),
 			.i_pcBranch(w_pcBranch_EXMEM),
-
 			.i_haltFlag_MEM(w_haltFlag_EXMEM),
+			.i_debug (i_debug),
 			
 			//outputs		
 			.o_readData(w_readData),

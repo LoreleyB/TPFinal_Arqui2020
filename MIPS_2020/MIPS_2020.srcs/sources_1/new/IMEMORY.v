@@ -39,6 +39,7 @@ module IMEMORY #(
 	input i_zeroFlag,
 	input [len-1:0] i_pcBranch,
 	input i_haltFlag_MEM,
+	input i_debug,
 
 	output reg [len-1:0] o_readData,
 	output o_flagBranch,
@@ -92,7 +93,7 @@ module IMEMORY #(
 			.clka(clk),
 			
 			.i_writeEnable(w_memWrite),
-			.enable(w_memRead),
+			.enable(i_debug ? 0 :w_memRead),
 			.o_dataD(w_dataOut)
 			);
 
@@ -109,7 +110,7 @@ module IMEMORY #(
 		end
 
 		
-		else begin
+		else if (!i_debug) begin
 			o_haltFlag_MEM <= i_haltFlag_MEM;
 
 			o_signalControlWB <= i_signalControlWB;

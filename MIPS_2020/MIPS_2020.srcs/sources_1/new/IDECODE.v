@@ -38,6 +38,7 @@ module IDECODE #(
 	input [NB-1:0] i_writeRegister,
 	input i_flush,
 	input i_haltFlag_ID,
+	input i_debug,
 
 	output reg [len-1:0] o_pcBranch,
 	output [len-1:0] o_pcJump,	
@@ -110,6 +111,7 @@ module IDECODE #(
 			.i_readRegister2(i_instruction[20:16]),
 			.i_writeRegister(i_writeRegister),
 			.i_writeData(i_writeData),
+			.enable (!i_debug),
 
 			.o_wireReadData1(w_outRegisterData1),
 			.o_readData1(w_registerData1),
@@ -144,7 +146,7 @@ module IDECODE #(
 		end
 
 		
-		else begin
+		else if (!i_debug) begin
 			o_haltFlag_ID <= i_haltFlag_ID;
 
 			if(i_flush)

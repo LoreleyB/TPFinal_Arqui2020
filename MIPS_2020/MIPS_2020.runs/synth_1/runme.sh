@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1'
+HD_PWD='D:/ARQUITECTURA/TPFinal_Arqui2020/MIPS_2020/MIPS_2020.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

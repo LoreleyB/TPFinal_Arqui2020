@@ -1,0 +1,8 @@
+LB D,0(1B)
+LBU 1B,0(13)
+ADDU F,D,1B
+LHU 4,1(A)
+LHU 2,0(3FF)
+SH 2,0(3)
+SB 2,0(4)
+HALT

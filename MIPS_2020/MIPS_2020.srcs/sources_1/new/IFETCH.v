@@ -21,7 +21,8 @@
 
 
 module IFETCH #(
-	parameter len = 32
+	parameter len = 32,
+	parameter INIT_FILE = ""
 	) (
 	input clk,
 	
@@ -31,6 +32,10 @@ module IFETCH #(
 	input [len-1:0] i_pcBranch,
 	input [len-1:0] i_pcRegister,
 	input i_stallFlag, //cargar PC y lectura de isntruccion
+	input [len-1:0] i_data_address,
+    input i_W_E,
+	input [len-1:0] i_instruc_address,
+	input i_debug,
 
 	output reg [len-1:0] o_pcBranch,
 	output [len-1:0] o_instruction,
@@ -68,24 +73,26 @@ module IFETCH #(
 			.i_PC((w_validI)?(w_pctoSumadorMem):(w_muxPc)),
 			.clk(clk),
 			.reset(reset),
-			.enable(i_stallFlag),
+			.enable((i_W_E || i_debug ) ? 0 : i_stallFlag),//haz
 			.o_PC(w_pctoSumadorMem)
 			);
 
 	INSTRUCTION_RAM #(
 		.RAM_WIDTH(len),
 		.RAM_DEPTH(2048),
-		 .INIT_FILE("C:/Arquitectura/TPFinal_Arqui2020/MIPS_2020/program.hex")
+		 .INIT_FILE(INIT_FILE) //"D:/ARQUITECTURA/TPFinal_Arqui2020/MIPS_2020/program.hex")
 		//.RAM_PERFORMANCE("LOW_LATENCY")
 		)
 		INSTRUCTION_RAM(
-			.i_addressI(w_pctoSumadorMem),
+			.i_addressI(i_W_E ? i_instruc_address : w_pctoSumadorMem),
 			.clka(clk),
 			.reset(reset),
-			.enable(i_stallFlag),
+			.enable((i_W_E || i_debug ) ? 0 :i_stallFlag),
 			.o_validI(w_validI),
 			.i_flush(w_flush),
-			.o_dataI(w_instruction)
+			.o_dataI(w_instruction),
+			.i_data_address (i_data_address),
+			.i_W_E(i_W_E)
 			); 
 
 	PC_SUM #(
@@ -103,9 +110,7 @@ module IFETCH #(
 			o_pcBranch <= 0;
 			o_haltFlag_IF <= 0;			
 		end
-
-        
-        else begin
+        else if (!i_debug)  begin
             o_haltFlag_IF <= w_validI;
     
             if (i_stallFlag | w_flush) 
